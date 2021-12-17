@@ -1,0 +1,214 @@
+I"�2<h1 id="project-vexed---hacker-style-personal-homepage">PROJECT VeXEd - HACKER-STYLE PERSONAL HOMEPAGE</h1>
+
+<p><br /></p>
+<blockquote>
+  <p>pRoJEct-NeGYa is a hacker-like, highly-customizable theme for note-keeping, personal-website or CV.</p>
+</blockquote>
+
+<h2 id="features">Features</h2>
+
+<ul>
+  <li>Highly customizable with user-friendly hacker-like design.</li>
+  <li>Easy to gather your notes or portfolios with multiple collection design.</li>
+  <li>Supports formula insertion with <code class="language-plaintext highlighter-rouge">MathJax</code>.</li>
+</ul>
+
+\[\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix}
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+\frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \\
+\frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0 \\
+\end{vmatrix}\]
+
+<ul>
+  <li>Supports code highlight with <code class="language-plaintext highlighter-rouge">Rouge</code>.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+<span class="n">quickSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">print</span> <span class="p">(</span><span class="s">"Sorted array is:"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">"%d"</span> <span class="o">%</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]),</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Decrypt and encrypt text (access token: 233):
+    <ul>
+      <li>secret msg example:</li>
+    </ul>
+    <p class="encrypted" id="/MZAf/PKx9jpw8/Jnp7XQQFki2ibGnArZP46W+keVThXquhWwFROEFnbY8eC57Tw==">Encrypted content!</p>
+  </li>
+</ul>
+
+<h2 id="download-and-documentation">Download and Documentation</h2>
+
+<p><a href="https://github.com/akiritsu/pRoJEct-VeXEd"><strong>pRoJEct VeXEd README (Github)</strong></a></p>
+
+<p><a href="https://codeload.github.com/akiritsu/pRoJEct-VeXEd/zip/master">Download ZIP files</a></p>
+
+<p><a href="https://akiritsu.github.io/pRoJEct-VeXEd/readme-zhcn/">中文自述及使用教程</a></p>
+
+<h2 id="more-samples">More Samples</h2>
+
+<h3 id="font-style-and-link">Font style and link</h3>
+
+<p>normal <strong>bold</strong> <em>italic</em> <del>strikethrough</del> <code class="language-plaintext highlighter-rouge">keyword</code> <a href="www.google.com">Link to Google</a></p>
+
+<h3 id="list">List</h3>
+
+<ol>
+  <li>ordered list item 1
+    <ol>
+      <li>sublist
+        <ol>
+          <li>subsublist</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<ul>
+  <li>unordered list
+    <ul>
+      <li>sublist</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="table">Table</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Date</th>
+      <th style="text-align: left">Version</th>
+      <th style="text-align: left">Size</th>
+      <th style="text-align: left">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Nov 11, 2018</td>
+      <td style="text-align: left">v2.14c</td>
+      <td style="text-align: left">240 kb</td>
+      <td style="text-align: left">No irreversible damage</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Nov 12, 2018</td>
+      <td style="text-align: left">v2.14c</td>
+      <td style="text-align: left">1230 kb</td>
+      <td style="text-align: left">No irreversible damage</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Nov 13, 2018</td>
+      <td style="text-align: left">v2.14c</td>
+      <td style="text-align: left">12kb</td>
+      <td style="text-align: left">No irreversible damage</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Nov 15, 2018</td>
+      <td style="text-align: left">v1.99 LTS</td>
+      <td style="text-align: left">4kb</td>
+      <td style="text-align: left">Irreversible damage</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="diagram-and-chart">Diagram and Chart</h3>
+
+<h4 id="pie-chart">Pie Chart</h4>
+
+<pre><code class="language-mermaid">pie
+    title Pie Chart
+    "Dogs" : 36
+    "Cats" : 85
+    "Rats" : 150
+    "Pheonix" : 120
+    "Elephant" : 330 
+</code></pre>
+
+<h4 id="sequence-diagram">Sequence Diagram</h4>
+
+<pre><code class="language-mermaid">sequenceDiagram
+    Alice-&gt;&gt;Bob: Hello Bob, how are you?
+    alt is sick
+    Bob-&gt;&gt;Alice: Not so good :(
+    else is well
+    Bob-&gt;&gt;Alice: Feeling fresh like a daisy
+    end
+    opt Extra response
+    Bob-&gt;&gt;Alice: Thanks for asking
+    end
+</code></pre>
+
+<h4 id="flow-chart">Flow Chart</h4>
+
+<pre><code class="language-mermaid">graph LR
+A[Hard edge] --&gt;B(Round edge)
+    B --&gt; C{Decision}
+    C --&gt;|One| D[Result one]
+    C --&gt;|Two| E[Result two]
+</code></pre>
+
+<h3 id="more-texts">More Texts</h3>
+
+<p>Λορεμ ιπσθμ δολορ σιτ αμετ, νονθμυ δολορεσ πρινcιπεσ εαμ αν, ρεγιονε σθσcιπιτ αccθσατα νε πρι, εα εαμ γραεcο μελιθσ αccθσαμ. Vολθπτθα δισσεντιασ τε ηασ, τε πρι σθασ ηαρθμ αδιπισcινγ. Qθο ατ ιθστο ταcιματεσ, μελ εραντ ρεπθδιανδαε ετ. Ετ τιμεαμ cονcεπταμ αccομμοδαρε νεc, ιδ σεα μελιορε λθπτατθμ. Αδ περσεcθτι cοντεντιονεσ θσθ. Ηομερο νοστρο θταμθρ εαμ εξ.</p>
+
+<p>Νεc ιδ λεγερε ρεγιονε διcερετ, vιμ εθ νιβη ιριθρε cορπορα. Αδ vιξ διcο νατθμ εσσεντ. Ιλλθδ αλιqθιδ ει σιτ, δοcτθσ vιδισσε δετραξιτ αν μεα. Ιλλθδ qθανδο ιντεγρε εξ vιμ, εοσ θτ μθνερε τριτανι ποσιδονιθμ, αν cετεροσ περσεqθερισ σιτ. Λατινε δισcερε vοcιβθσ πρι νο, vιμ cθ νοστρο μαλθισσετ vολθπταρια. omega lul</p>
+
+<h3 id="more-codes">More Codes</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Python program for implementation of Quicksort Sort
+</span>
+<span class="c1"># This function takes last element as pivot, places
+# the pivot element at its correct position in sorted
+# array, and places all smaller (smaller than pivot)
+# to left of pivot and all greater elements to right
+# of pivot
+</span><span class="k">def</span> <span class="nf">partition</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="n">low</span><span class="p">,</span><span class="n">high</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="p">(</span> <span class="n">low</span><span class="o">-</span><span class="mi">1</span> <span class="p">)</span>         <span class="c1"># index of smaller element
+</span>    <span class="n">pivot</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">high</span><span class="p">]</span>     <span class="c1"># pivot
+</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">low</span> <span class="p">,</span> <span class="n">high</span><span class="p">):</span>
+
+        <span class="c1"># If current element is smaller than or
+</span>        <span class="c1"># equal to pivot
+</span>        <span class="k">if</span>   <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">pivot</span><span class="p">:</span>
+
+            <span class="c1"># increment index of smaller element
+</span>            <span class="n">i</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span>
+            <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+    <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span><span class="n">arr</span><span class="p">[</span><span class="n">high</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">high</span><span class="p">],</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="p">(</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span> <span class="p">)</span>
+
+<span class="c1"># The main function that implements QuickSort
+# arr[] --&gt; Array to be sorted,
+# low  --&gt; Starting index,
+# high  --&gt; Ending index
+</span>
+<span class="c1"># Function to do Quick sort
+</span><span class="k">def</span> <span class="nf">quickSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="n">low</span><span class="p">,</span><span class="n">high</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">low</span> <span class="o">&lt;</span> <span class="n">high</span><span class="p">:</span>
+
+        <span class="c1"># pi is partitioning index, arr[p] is now
+</span>        <span class="c1"># at right place
+</span>        <span class="n">pi</span> <span class="o">=</span> <span class="n">partition</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="n">low</span><span class="p">,</span><span class="n">high</span><span class="p">)</span>
+
+        <span class="c1"># Separately sort elements before
+</span>        <span class="c1"># partition and after partition
+</span>        <span class="n">quickSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">pi</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">quickSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">pi</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">high</span><span class="p">)</span>
+
+<span class="c1"># Driver code to test above
+</span><span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+<span class="n">quickSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">print</span> <span class="p">(</span><span class="s">"Sorted array is:"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">"%d"</span> <span class="o">%</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]),</span>
+
+<span class="c1"># This code is contributed by Mohit Kumra
+</span></code></pre></div></div>
+:ET
