@@ -1,0 +1,26 @@
+// fonts
+@font-face {
+  font-family: "VT323";
+  src: url("../fonts/VT323-Regular.ttf");
+}
+@font-face {
+  font-family: "DotGothic";
+  src: url("../fonts/DotGothic16-Regular.ttf");
+}
+
+// font family
+$font-serif-body: VT323, Times, serif, "Source Han Sans CN Medium",
+  "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei",
+  "WenQuanYi Micro Hei" !important;
+
+$font-serif-title: DotGothic, Times, serif, "Source Han Sans CN Medium",
+  "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei",
+  "WenQuanYi Micro Hei" !important;
+
+$font-sans-serif: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
+  "Helvetica Neue", "Lucida Grande", Arial, sans-serif,
+  "Source Han Serif CN Medium", "PingFang SC", "Hiragino Sans GB", "Heiti SC",
+  "Microsoft YaHei", "WenQuanYi Micro Hei" !default;
+$monospace: Monaco, Consolas, "Lucida Console", monospace !default;
+$font-monospace: "Fira Code", "Source Code Pro", Monaco, Consolas,
+  "Lucida Console", monospace !default;

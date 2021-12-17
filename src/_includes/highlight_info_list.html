@@ -1,0 +1,42 @@
+{% for highlight in site.highlights reversed %}
+<div class="highlight_info">
+  <div class="row">
+    <div class="col-sm-12">
+      <!-- title -->
+    {% if highlight.title %}
+    <div>
+      <p class="title-highlight" >{{ highlight.title }}.
+        <!-- date -->
+        {% if highlight.date %}
+        «{{ highlight.date | date: "%b %d, %Y" }}
+        {% endif %}
+         <!-- conference -->
+        {% if highlight.conference %}
+          {{ highlight.conference }}»
+        {% endif %}</p> 
+    </div>
+    {% endif %}
+    </div>
+  </div>
+  <div class="row">
+  <div class="col-sm-5">
+        <!-- image -->
+      {% if highlight.image %}
+      
+        <img class="image-highlight" src={{site.url}}{{site.baseurl}}{{highlight.image}}/>
+  
+      {% endif %}
+  </div>
+  <div class="col-sm-7">
+    <!-- short_desc -->
+    {% if highlight.short_desc %}
+    <div >
+      <p class="short-desc-highlight" >{{ highlight.short_desc }}</p>
+    </div>
+    {% endif %}
+  </div>
+  </div>
+</div>
+<div class="separator-zone-1 anythingelse"></div>
+{% endfor %}
+

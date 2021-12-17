@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-12-17T16:59:51-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html"> | True</title><subtitle>Ricardo Gonzalez personal homepage</subtitle><entry><title type="html">An Encrypt and Dectrypt tool with sjcl.js</title><link href="http://localhost:4000/sjcl/" rel="alternate" type="text/html" title="An Encrypt and Dectrypt tool with sjcl.js" /><published>2016-01-01T00:00:00-05:00</published><updated>2016-01-01T00:00:00-05:00</updated><id>http://localhost:4000/sjcl</id><content type="html" xml:base="http://localhost:4000/sjcl/">&lt;!-- aes encrypt and decrypt method --&gt;
+&lt;script
+  src=&quot;http://localhost:4000/js/sjcl.js&quot;
+  async
+&gt;&lt;/script&gt;
+
+&lt;div class=&quot;div_token&quot;&gt;
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;th colspan=&quot;3&quot;&gt;
+        Password is required in both encryption and decryption
+      &lt;/th&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Password&lt;/td&gt;
+        &lt;td&gt;
+          &lt;textarea
+            class=&quot;access_token&quot;
+            rows=&quot;1&quot;
+            cols=&quot;50&quot;
+            id=&quot;pwd&quot;
+            style=&quot;resize: vertical;&quot;
+          &gt;&lt;/textarea&gt;
+        &lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;
+          Message
+        &lt;/td&gt;
+        &lt;td&gt;
+          &lt;textarea
+            class=&quot;access_token&quot;
+            rows=&quot;5&quot;
+            cols=&quot;50&quot;
+            id=&quot;msg&quot;
+            style=&quot;resize: vertical;&quot;
+          &gt;&lt;/textarea&gt;
+        &lt;/td&gt;
+        &lt;td&gt;&lt;button class=&quot;encrypt&quot; onclick=&quot;encrypt()&quot;&gt;Encrypt&lt;/button&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Ciphertext&lt;/td&gt;
+        &lt;td&gt;
+          &lt;textarea
+            class=&quot;access_token&quot;
+            rows=&quot;5&quot;
+            cols=&quot;50&quot;
+            id=&quot;ct&quot;
+            style=&quot;resize: vertical;&quot;
+          &gt;&lt;/textarea&gt;
+        &lt;/td&gt;
+        &lt;td&gt;&lt;button class=&quot;encrypt&quot; onclick=&quot;decrypt()&quot;&gt;Decrypt&lt;/button&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Minimized&lt;/td&gt;
+        &lt;td&gt;
+          &lt;textarea
+            class=&quot;access_token&quot;
+            rows=&quot;5&quot;
+            cols=&quot;50&quot;
+            id=&quot;min_text&quot;
+            style=&quot;resize: vertical;&quot;
+          &gt;&lt;/textarea&gt;
+        &lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  function encrypt() {
+    var pwd = document.getElementById(&quot;pwd&quot;).value;
+    var msg = document.getElementById(&quot;msg&quot;).value;
+    var ct =  sjcl.json.encrypt(pwd, msg,{salt: &quot;&quot;});
+    var ct_obj = JSON.parse(ct);
+    document.getElementById(&quot;ct&quot;).value = ct;
+    document.getElementById(&quot;msg&quot;).value = &quot;&quot;;
+    document.getElementById(&quot;min_text&quot;).value = (ct_obj.iv.substring(0,22) + ct_obj.ct);
+  }
+  function decrypt() {
+    var pwd = document.getElementById(&quot;pwd&quot;).value;
+    var ct = document.getElementById(&quot;ct&quot;).value;
+    document.getElementById(&quot;msg&quot;).value = sjcl.json.decrypt(pwd, ct);
+    document.getElementById(&quot;ct&quot;).value = &quot;&quot;;
+    document.getElementById(&quot;min_text&quot;).value = &quot;&quot;;
+  }
+&lt;/script&gt;</content><author><name></name></author><category term="true" /><summary type="html"></summary></entry><entry><title type="html">In Construction</title><link href="http://localhost:4000/InConstruction/" rel="alternate" type="text/html" title="In Construction" /><published>2000-01-01T00:00:00-05:00</published><updated>2000-01-01T00:00:00-05:00</updated><id>http://localhost:4000/InConstruction</id><content type="html" xml:base="http://localhost:4000/InConstruction/">&lt;p&gt;Empty!&lt;/p&gt;
+
+&lt;p&gt;Come back again later :)&lt;/p&gt;</content><author><name></name></author><category term="true" /><summary type="html">Empty!</summary></entry></feed>
