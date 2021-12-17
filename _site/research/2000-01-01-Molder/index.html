@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  <!-- multi-device width -->
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <!-- site description -->
+  
+  <meta content="Molder: An Accessible Design Tool for Tactile Maps" name="description" />
+  <!-- referer for 3rd-part images-->
+  <meta content="no-referrer" name="referrer" />
+  <!-- title -->
+  <title>
+     Molder: An Accessible Design Tool for Tactile Maps 
+  </title>
+  <!-- icon -->
+  <link
+    href="http://localhost:4000/src/assets/img/favicon.ico"
+    rel="shortcut icon bookmark"
+    type="image/x-icon"
+  />
+  <!-- global stylesheet -->
+  <link
+    rel="stylesheet"
+    href="http://localhost:4000/src/assets/css/main.css"
+    type="text/css"
+  />
+  <!-- fa 5.9.0 -->
+  <link
+    rel="stylesheet"
+    href="http://localhost:4000/src/assets/css/fa.min.css"
+    type="text/css"
+  />
+  <!-- global script -->
+  <script
+    src="http://localhost:4000/src/assets/js/main.js"
+    async
+  ></script>
+  <!-- mathjax 2.7.5 -->
+  <script
+    async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+  ></script>
+  <!-- mermaid 8.11.5-->
+  <script
+    async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.11.5/mermaid.min.js"
+  ></script>
+
+  <!-- Ricardo Changes-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DotGothic16&family=VT323&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Molder: An Accessible Design Tool for Tactile Maps</title>
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="Molder: An Accessible Design Tool for Tactile Maps" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Molder: An Accessible Design Tool for Tactile Maps" />
+<meta property="og:description" content="Molder: An Accessible Design Tool for Tactile Maps" />
+<link rel="canonical" href="http://localhost:4000/research/2000-01-01-Molder/" />
+<meta property="og:url" content="http://localhost:4000/research/2000-01-01-Molder/" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2000-01-01T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Molder: An Accessible Design Tool for Tactile Maps" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","description":"Molder: An Accessible Design Tool for Tactile Maps","headline":"Molder: An Accessible Design Tool for Tactile Maps","dateModified":"2000-01-01T00:00:00-05:00","datePublished":"2000-01-01T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/research/2000-01-01-Molder/"},"url":"http://localhost:4000/research/2000-01-01-Molder/","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+  <body class="page">
+    <!-- background animations -->
+<div class="div_bg">
+    <canvas id="c"></canvas>
+</div>
+
+    <!-- collection list, shown by click "archive" buttom in header -->
+<div class="collection_list_container"  id="the_collection_list">
+<div class="collection_list_background"  onclick="close_collection_list()"></div>
+<div class="collection_list" onload="none">
+    <div class="collection_list_header">
+        <!-- TODO: search post -->
+                                            <!-- <a class="search_btn">
+      <i class="fa fa-search"> Search</i>
+    </a>
+    &nbsp; -->
+        <table class="collection_list_header_title">
+            <tr>
+                <td>Archive:</td>
+                <td id="clh_title"></td>
+            </tr>
+        </table>
+        <div class="close_btn" onclick="close_collection_list()">
+            <a class="close_btn_icon">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="collection_name_list">
+        <table class="vertical_center_table">
+            <tr>
+                <td>
+                    <ul>
+                        <!-- show all collections -->
+                        <li>
+                            <a class="a_collection_label" onclick="show_collection('all')">All
+                            </a>
+                        </li>
+                        <!-- show a simple collection -->
+                        
+                            
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <li>
+                                            <a class="a_collection_label" onclick="show_collection('research')">
+                                                
+                                                    research
+                                                
+                                            </a>
+                                        </li>
+                                    
+                                
+                            
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <li>
+                                            <a class="a_collection_label" onclick="show_collection('posts')">
+                                                
+                                                    posts
+                                                
+                                            </a>
+                                        </li>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                            
+                                
+                                    
+                                
+                                    
+                                        <li>
+                                            <a class="a_collection_label" onclick="show_collection('my_notes')">
+                                                
+                                                    My Notes
+                                                
+                                            </a>
+                                        </li>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                            
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <li>
+                                            <a class="a_collection_label" onclick="show_collection('projects')">
+                                                
+                                                    projects
+                                                
+                                            </a>
+                                        </li>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                            
+                        
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="posts_by_cate">
+        <!-- post list in all collections -->
+        <div class="post_list_in_1_collection" id="all">
+            <table class="vertical_center_table">
+                <tr>
+                    <td>
+                        <ul>
+                            
+                                
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                            <p class="h_collection_label">
+                                                
+                                                    research
+                                                
+                                            </p>
+                                            
+                                                
+                                                    <li>
+                                                        <a class="a_title" href="http://localhost:4000/research/2000-01-01-AcousticMinimap/">Acoustic Minimaps for Visually Impaired Gamers</a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li>
+                                                        <a class="a_title" href="http://localhost:4000/research/2000-01-01-Markit/">Markit, a Blender Add-on to Augment 3D Models</a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li>
+                                                        <a class="a_title" href="http://localhost:4000/research/2000-01-01-Molder/">Molder: An Accessible Design Tool for Tactile Maps</a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li>
+                                                        <a class="a_title" href="http://localhost:4000/research/2000-01-01-Talkit++/">Talkit++ interacting with 3D printed models!</a>
+                                                    </li>
+                                                
+                                            
+                                            <br/>
+                                        
+                                    
+                                
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                            <p class="h_collection_label">
+                                                
+                                                    posts
+                                                
+                                            </p>
+                                            
+                                                
+                                                    <li>
+                                                        <a class="a_title" href="http://localhost:4000/InConstruction/">In Construction</a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                            
+                                            <br/>
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                
+                                    
+                                        
+                                    
+                                        
+                                            <p class="h_collection_label">
+                                                
+                                                    My Notes
+                                                
+                                            </p>
+                                            
+                                                
+                                            
+                                                
+                                                    <li>
+                                                        <a class="a_title" href="http://localhost:4000/my_notes/In_construction/">In Construction</a>
+                                                    </li>
+                                                
+                                            
+                                            <br/>
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                            <p class="h_collection_label">
+                                                
+                                                    projects
+                                                
+                                            </p>
+                                            
+                                                
+                                                    <li>
+                                                        <a class="a_title" href="http://localhost:4000/projects/portfolio1/">In Construction</a>
+                                                    </li>
+                                                
+                                            
+                                            <br/>
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                
+                            
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!-- post list in a collection -->
+        
+            <div class="post_list_in_1_collection" id="highlights">
+                <table class="vertical_center_table">
+                    <tr>
+                        <td>
+                            <ul>
+                                
+                                    
+                                        <li>
+                                            <a class="a_title" href="http://localhost:4000/highlights/highlight_Molder/">Molder: An Accessible Design Tool for Tactile Maps</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li>
+                                            <a class="a_title" href="http://localhost:4000/highlights/highlight_Acoustic/">Towards a Generalized Acoustic Minimap for Visually Impaired Gamers</a>
+                                        </li>
+                                    
+                                
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        
+            <div class="post_list_in_1_collection" id="my_notes">
+                <table class="vertical_center_table">
+                    <tr>
+                        <td>
+                            <ul>
+                                
+                                    
+                                
+                                    
+                                        <li>
+                                            <a class="a_title" href="http://localhost:4000/my_notes/In_construction/">In Construction</a>
+                                        </li>
+                                    
+                                
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        
+            <div class="post_list_in_1_collection" id="posts">
+                <table class="vertical_center_table">
+                    <tr>
+                        <td>
+                            <ul>
+                                
+                                    
+                                        <li>
+                                            <a class="a_title" href="http://localhost:4000/InConstruction/">In Construction</a>
+                                        </li>
+                                    
+                                
+                                    
+                                
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        
+            <div class="post_list_in_1_collection" id="projects">
+                <table class="vertical_center_table">
+                    <tr>
+                        <td>
+                            <ul>
+                                
+                                    
+                                        <li>
+                                            <a class="a_title" href="http://localhost:4000/projects/portfolio1/">In Construction</a>
+                                        </li>
+                                    
+                                
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        
+            <div class="post_list_in_1_collection" id="recent_activity">
+                <table class="vertical_center_table">
+                    <tr>
+                        <td>
+                            <ul>
+                                
+                                    
+                                        <li>
+                                            <a class="a_title" href="http://localhost:4000/recent_activity/recent_activity_Molder/">Molder, an Accessible 3D printed AR modeling tool.</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li>
+                                            <a class="a_title" href="http://localhost:4000/recent_activity/recent_activity_Acoustic_accepted/">Towards a Generalized Acoustic Minimap for Visually Impaired Gamers</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li>
+                                            <a class="a_title" href="http://localhost:4000/recent_activity/recent_activity_Acoustic_presented/">Towards a Generalized Acoustic Minimap for Visually Impaired Gamers</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li>
+                                            <a class="a_title" href="http://localhost:4000/recent_activity/recent_activity_AcousticFull_rejected/">Acoustic Minimap for Visually Impaired Gamers</a>
+                                        </li>
+                                    
+                                
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        
+            <div class="post_list_in_1_collection" id="research">
+                <table class="vertical_center_table">
+                    <tr>
+                        <td>
+                            <ul>
+                                
+                                    
+                                        <li>
+                                            <a class="a_title" href="http://localhost:4000/research/2000-01-01-AcousticMinimap/">Acoustic Minimaps for Visually Impaired Gamers</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li>
+                                            <a class="a_title" href="http://localhost:4000/research/2000-01-01-Markit/">Markit, a Blender Add-on to Augment 3D Models</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li>
+                                            <a class="a_title" href="http://localhost:4000/research/2000-01-01-Molder/">Molder: An Accessible Design Tool for Tactile Maps</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li>
+                                            <a class="a_title" href="http://localhost:4000/research/2000-01-01-Talkit++/">Talkit++ interacting with 3D printed models!</a>
+                                        </li>
+                                    
+                                
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        
+    </div>
+</div>
+</div>
+    <div class="container" id="ctner">
+       <div class="header">
+  <table class="vertical_center_table">
+    <tr>
+      <td>
+        <nav class="nav_bar">
+          <ul>
+            <!-- left header -->
+            <li class="li_left">
+              <!-- open collection tree -->
+              
+              <a class="header_btn collection_btn" onclick="open_collection_list()">
+                <i class="fa btn_icon fa-bars">
+                  
+                  <p class="btn_text">Collection</p>
+                  
+                </i>
+              </a>
+              
+              <!-- home -->
+              
+              <a class="header_btn home_btn" href="http://localhost:4000/">
+                <i class="fa btn_icon fa-home">
+                  
+                  <p class="btn_text">Home</p>
+                  
+                </i>
+              </a>
+              
+              <!-- research -->
+              
+              <a class="header_btn research_btn" href="http://localhost:4000/Research">
+                <i class="fa btn_icon fa-flask">
+                  
+                  <p class="btn_text">Research</p>
+                  
+                </i>
+              </a>
+              
+              <!--maximize-->
+              <!---->
+              <!--<a class="header_btn" id="mxmz_btn" onclick="toggle_maximize()">-->
+              <!--  <i class="fa btn_icon fa-window-maximize">-->
+              <!--    -->
+              <!--    <p class="btn_text" id="mxmz_text">Maximize</p>-->
+              <!--    -->
+              <!--  </i>-->
+              <!--</a>-->
+              <!---->
+              <!-- access token -->
+              
+              
+            </li>
+            <!-- right header -->
+            <span class="span_right">
+              
+              <!-- scroll up -->
+              <a class="header_btn previous_btn" onclick="scroll_percentage(-0.88)">
+                <i class="fa btn_icon fa-backward">
+                  
+                  <p class="btn_text">Prev</p>
+                  
+                </i>
+              </a>
+              <!-- scroll down -->
+              <a class="header_btn next_btn" onclick="scroll_percentage(0.88)">
+                <i class="fa btn_icon fa-forward">
+                  
+                  <p class="btn_text">Next</p>
+                  
+                </i>
+              </a>
+              <!-- popup table of content -->
+              <a class="header_btn popup_btn" onclick="toggle_toc()">
+                <i class="fa btn_icon fa-list">
+                  
+                  <p class="btn_text">Content</p>
+                  
+                </i>
+              </a>
+              
+            </span>
+          </ul>
+        </nav>
+        <!-- <hr /> -->
+      </td>
+    </tr>
+  </table>
+ 
+</div>
+<!-- table of content -->
+
+<div class="div_toc toc" id="popup_toc">
+  
+  <!-- generate toc -->
+  <ul id="ul_toc" class="ul_toc">
+  <li><a href="#abstract">Abstract</a></li>
+  <li><a href="#preview">Preview</a></li>
+  <li><a href="#related-papers--publications">Related papers &amp; publications</a></li>
+</ul>
+</div>
+
+<!-- toggle maximize -->
+
+<script>
+  var ctner_state = 0;
+  var ctner = document.getElementById("ctner");
+</script>
+
+<!-- encrypt and decrypt -->
+
+
+      <div class="div_article" id="div_atcl">
+        <article
+          id="main_atcl"
+          itemscope
+          itemtype="http://schema.org/BlogPosting"
+        >
+          
+          <div class="post_info">
+  
+
+</div>
+<h1 id="molder-an-accessible-design-tool-for-tactile-maps">Molder: An Accessible Design Tool for Tactile Maps</h1>
+
+<p><img src="http://localhost:4000/src/assets/img/molder/demo_molder.jpg" alt="Preview of Molder, showing the poster presented at the demo showcase on ASSETS'19" /></p>
+
+<p>Authors: Lei Shi, Yuhang Zhao, <strong><em>Ricardo E. Gonzalez</em></strong>, Elizabeth Kupferstein, Shiri Azenkot</p>
+
+<p>Today, Orientation and Mobility (O&amp;M) specialists and teachers are often responsible for designing tactile materials to teach their students. However, most of them do not have professional modeling skills, and many are visually impaired themselves. To address this issue, we designed Molder, an accessible design tool for interactive tactile maps, an important type of tactile materials that can help students learn O&amp;M skills.</p>
+
+<p><a href="https://dl.acm.org/doi/10.1145/3313831.3376431">Molder</a> provides a simplified design process and easy-to-learn functions. Molder contributes an interaction paradigm towards accessible modeling.</p>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>Tactile materials are powerful teaching aids for students with visual impairments (VIs). To design these materials, designers must use modeling applications, which have high learning curves and rely on visual feedback.  A designer uses Molder to design a map using tangible input techniques, and Molder provides auditory feedback and high-contrast visual feedback. We evaluated Molder with 12 participants (8 with VIs, 4 sighted). After a 30-minute training session, the participants were all able to use Molder to design maps with customized tactile and interactive information.</p>
+
+<h2 id="preview">Preview</h2>
+<p><img src="http://localhost:4000/src/assets/img/molder/molder_demo.png" alt="Preview of Molder, showing 3D printed augmented models" /></p>
+
+<h2 id="related-papers--publications">Related papers &amp; publications</h2>
+<p><a href="https://dl.acm.org/doi/10.1145/3313831.3376431">Presented on CHI2020, Molder: An Accessible Design Tool for Tactile Maps </a></p>
+
+<p><a href="https://dl.acm.org/citation.cfm?id=3354594&amp;dl=ACM&amp;coll=DL">Presented on ASSETS’19, A Demonstration of Molder</a></p>
+
+
+ <div class="post_list">
+
+</div>
+        </article>
+         <div class="footer">
+  <nav class="nav_bar">
+    <ul class="footer_owner_info">
+      <!-- email -->
+      
+      <a class="footer_btn" href="mailto://reg258@cornell.edu">
+        <i class="fa fa-envelope-square">
+          
+          <p>Email</p>
+          
+        </i>
+      </a>
+      
+      <!-- linkedin -->
+      
+      <a
+        class="footer_btn"
+        href="https://www.linkedin.com/in/ricardo-enrique-gonzalez-penuela-b6ab04155"
+      >
+        <i class="fa fa-linkedin">
+          
+          <p>LinkedIn</p>
+          
+        </i>
+      </a>
+      
+      <!-- github -->
+      
+      <a class="footer_btn" href="https://github.com/rgonzalezp">
+        <i class="fa fa-github">
+          
+          <p>Github</p>
+          
+        </i>
+      </a>
+      
+      <!-- gitlab -->
+      
+      <!-- website -->
+      
+      <!-- twitter -->
+      
+      <!-- facebook -->
+      
+      <!-- instagram -->
+      
+      <!-- youtube -->
+      
+      <!-- steam -->
+      
+      <!-- weibo -->
+      
+    </ul>
+    <!-- copyright -->
+    <ul class="footer_copyright">
+      
+      <li>You went all the way down here? Okay have a cookie 🍪</li>
+      
+    </ul>
+  </nav>
+</div>
+ 
+      </div>
+    </div>
+  </body>
+  <script async src="http://localhost:4000/src/assets/js/init-mermaid.js"></script>
+</html>
