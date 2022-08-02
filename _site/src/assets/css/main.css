@@ -415,7 +415,7 @@ input[type="checkbox"]:checked::before { content: "\2714"; vertical-align: middl
 
 #highlight { font-size: 70px; padding-top: 25px; height: 50px; font-family: DotGothic, Times, serif, "Source Han Sans CN Medium", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei" !important; padding-left: 30px; }
 
-#recent-activity { font-size: 70px; height: 100px; font-family: DotGothic, Times, serif, "Source Han Sans CN Medium", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei" !important; padding-top: 20px; text-align: center; }
+#recent-activity { font-size: 60px; height: 100px; font-family: DotGothic, Times, serif, "Source Han Sans CN Medium", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei" !important; padding-top: 20px; text-align: center; }
 
 .separator-zone-1 { margin-top: 85px; border: 2.1px solid #c8c8c8; border-bottom: none; border-right: none; border-left: none; width: 88%; margin-left: 30px; }
 
