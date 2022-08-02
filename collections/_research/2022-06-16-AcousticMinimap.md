@@ -5,7 +5,7 @@ title: Acoustic Minimaps for Visually Impaired Gamers
 
 ![Preview of Talkit++, showing a 3D printed airplane while a person interacts with it]({{site.url}}{{site.baseurl}}/src/assets/img/minimap/minimaparticle.png)
 
-Authors: Vishnu Nair, Shao-en Ma, Hannah Huddleston, Karen Lin, Mason Hayes, Matthew Donnelly, ***Ricardo E. Gonzalez***, Yicheng He, Brian A. Smith
+Authors: Vishnu Nair, Shao-en Ma, Hannah Huddleston, Karen Lin, Mason Hayes, Matthew Donnelly, ***Ricardo E. Gonzalez***, Yicheng He, and Brian A. Smith
 
 Video games created for visually impaired players (VIPs) remain inequivalent to those created for sighted players. Sighted players use minimaps within games to learn how their surrounding environment is laid out, but there is no effective analogue to the minimap for visually impaired players. 
 

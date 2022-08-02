@@ -1,0 +1,25 @@
+I"�<h1 id="markit-a-blender-add-on-to-augment-3d-models">Markit, a Blender Add-on to Augment 3D Models</h1>
+
+<p><img src="http://localhost:4000/src/assets/img/markit/markit_demo.jpg" alt="Preview of Markit, showing the UI interface of the tool in Blender" /></p>
+
+<p>Authors: Lei Shi, and <strong><em>Ricardo E. Gonzalez</em></strong></p>
+
+<p>Markit is an add-on to Blender, a popular 3D modeling application among 3D model designers. It provides step-by-step guidance for creating augmented models for non-experts. After importing a downloaded model into Markit, a maker can add the tracker scaffold and associate textual annotations with elements on the model. With the model annotated, we can explore the annotations through <a href="link">Talkit++</a>.</p>
+
+<p>Markit enables non-expert users to be able to create their own 3D printed augmented models without necessarily knowing all the steps involved with creating 3D models. They can easily reuse pre-existing models in Markit available on popular online repositories of 3D models like <a href="link">Thingiverse</a>, <a href="link">site2</a>, and many others!</p>
+
+<h2 id="demo">Demo</h2>
+
+<p>Explained by Lei Shi, the first Author! Amazing</p>
+<div>
+<iframe class="demo-video" width="560" height="315" src="https://www.youtube.com/embed/pHFmWrdXs8k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+<h2 id="related-papers--publications">Related papers &amp; publications</h2>
+
+<p><a href="https://zenodo.org/record/3541081#.Ya5nSFNOnzI">Source code for Markit</a></p>
+
+<p><a href="https://dl.acm.org/doi/10.1145/3234695.3241004">Presented on ASSETS’18, Demo of Talkit++</a></p>
+
+<p><a href="https://dl.acm.org/doi/10.1145/3126594.3126650">Presented on ASSETS’17, Markit and Talkit, a Low-Barrier toolkit to augment 3D printed models</a></p>
+
+:ET

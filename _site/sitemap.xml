@@ -30,7 +30,7 @@
 </url>
 <url>
 <loc>http://localhost:4000/projects/portfolio1/</loc>
-<lastmod>2022-08-02T10:15:12-04:00</lastmod>
+<lastmod>2022-08-02T11:50:06-04:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/recent_activity/recent_activity_Molder/</loc>
@@ -47,6 +47,10 @@
 <url>
 <loc>http://localhost:4000/recent_activity/recent_activity_AcousticFull_rejected/</loc>
 <lastmod>2021-11-15T00:00:00-05:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/recent_activity/recent_activity_DLI_Fellowship_award/</loc>
+<lastmod>2022-05-24T00:00:00-04:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/recent_activity/recent_activity_SAT_preference_accepted/</loc>

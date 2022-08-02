@@ -4,7 +4,7 @@ title: Challenges and Experiences of Taking Selfies
 # [Understanding How People with Visual Impairments Take Selfies: Experiences and Challenges]()
 
 
-Authors: ***Ricardo E. Gonzalez Penuela***, Paul Vermette, Zihan Yan, Cheng Zhang, Keith Vertanen, Shiri Azenkot.
+Authors: ***Ricardo E. Gonzalez Penuela***, Paul Vermette, Zihan Yan, Cheng Zhang, Keith Vertanen, and Shiri Azenkot.
 
 ## Short Summary of Work
 
@@ -42,7 +42,7 @@ information should be modifiable with varying degrees of specificity to adapt to
 
 ## Demo
 
-<iframe class="demo-video" width="560" height="315" src="https://www.youtube.com/embed/404"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Soon!
 
 
 
