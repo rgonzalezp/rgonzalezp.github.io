@@ -21,6 +21,11 @@
   background-color: black;
 
 }
+
+.scrollableColumn{
+  overflow-y: scroll;
+  height: 1400px;
+}
 .div_article {
   top: $header-height + 1px;
   height: 92%;

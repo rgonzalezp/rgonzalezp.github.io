@@ -1,7 +1,7 @@
 ---
 title: Acoustic Minimaps for Visually Impaired Gamers
 ---
-# [Towards a Generalized Acoustic Minimap for Visually Impaired Gamers](https://dl-acm-org.proxy.library.cornell.edu/doi/10.1145/3474349.3480177)
+# [Towards a Generalized Acoustic Minimap for Visually Impaired Gamers](https://dl.acm.org/doi/10.1145/3474349.3480177)
 
 ![Preview of Talkit++, showing a 3D printed airplane while a person interacts with it]({{site.url}}{{site.baseurl}}/src/assets/img/minimap/minimaparticle.png)
 
