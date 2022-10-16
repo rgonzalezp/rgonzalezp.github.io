@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   {% include head.html %}
+  
   <body class="page">
     {% include background.html %}
     {% include collection_list.html %}
@@ -13,7 +14,7 @@
           itemtype="http://schema.org/BlogPosting"
         >
           {% if page.homepage == true %} {% include homepage.html %} {% endif %}
-          {{content}} {% include post_list.html %}
+          {{content}} 
         </article>
         {% if page.footer != false %} {% include footer.html %} {% endif %}
       </div>

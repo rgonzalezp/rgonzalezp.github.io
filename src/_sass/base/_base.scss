@@ -175,3 +175,24 @@ input[type="checkbox"]:checked::before {
   font-size: 15px;
   font-weight: bold;
 }
+
+#tiles {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-template-rows: repeat(var(--rows), 1fr);
+}
+
+#ctner {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(var(--colummns), 1fr);
+  grid-template-rows: repeat(var(--rows), 1fr);
+}
+
+
+.tile {
+  
+}

@@ -47,6 +47,19 @@
     src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.11.5/mermaid.min.js"
   ></script>
 
+  <!-- GreenSock animations-->
+  <script
+    async
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js">
+  </script>
+  <!-- Anime JS animations staggering-->
+  <script 
+  async
+  src="http://localhost:4000/src/assets/js/anime.min.js"></script>
+  <!-- Grid animation-->
+  <script 
+  async
+  src="http://localhost:4000/src/assets/js/gridanimation.js"></script>
   <!-- Ricardo Changes-->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -56,7 +69,7 @@
   />
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Hands-On: Using Hand Gestures to Interactively Obtain Descriptions in a VR Environment</title>
-<meta name="generator" content="Jekyll v4.2.1" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Hands-On: Using Hand Gestures to Interactively Obtain Descriptions in a VR Environment" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Hands-On: Using Gestures to Control Descriptions of a Virtual Environment for People with Visual Impairments" />
@@ -64,19 +77,21 @@
 <link rel="canonical" href="http://localhost:4000/research/2022-07-20-Hands_On/" />
 <meta property="og:url" content="http://localhost:4000/research/2022-07-20-Hands_On/" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-07-20T00:00:00-04:00" />
+<meta property="article:published_time" content="2022-07-20T00:00:00-07:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Hands-On: Using Hand Gestures to Interactively Obtain Descriptions in a VR Environment" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","description":"Hands-On: Using Gestures to Control Descriptions of a Virtual Environment for People with Visual Impairments","headline":"Hands-On: Using Hand Gestures to Interactively Obtain Descriptions in a VR Environment","dateModified":"2022-07-20T00:00:00-04:00","datePublished":"2022-07-20T00:00:00-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/research/2022-07-20-Hands_On/"},"url":"http://localhost:4000/research/2022-07-20-Hands_On/","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","description":"Hands-On: Using Gestures to Control Descriptions of a Virtual Environment for People with Visual Impairments","url":"http://localhost:4000/research/2022-07-20-Hands_On/","headline":"Hands-On: Using Hand Gestures to Interactively Obtain Descriptions in a VR Environment","dateModified":"2022-07-20T00:00:00-07:00","datePublished":"2022-07-20T00:00:00-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/research/2022-07-20-Hands_On/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
 
+  
   <body class="page">
     <!-- background animations -->
 <div class="div_bg">
-    <canvas id="c"></canvas>
+    <div id="tiles"></div>
+    
 </div>
 
     <!-- collection list, shown by click "archive" buttom in header -->
@@ -752,9 +767,7 @@ version of the shape of held objects (e.g., Cylinders, spheres, rectangular geom
 
 <p><a href="">Submitted to UIST’22, stay tuned for more info.</a></p>
 
- <div class="post_list">
-
-</div>
+ 
         </article>
          <div class="footer">
   <nav class="nav_bar">

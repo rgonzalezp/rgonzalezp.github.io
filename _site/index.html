@@ -47,6 +47,19 @@
     src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.11.5/mermaid.min.js"
   ></script>
 
+  <!-- GreenSock animations-->
+  <script
+    async
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js">
+  </script>
+  <!-- Anime JS animations staggering-->
+  <script 
+  async
+  src="http://localhost:4000/src/assets/js/anime.min.js"></script>
+  <!-- Grid animation-->
+  <script 
+  async
+  src="http://localhost:4000/src/assets/js/gridanimation.js"></script>
   <!-- Ricardo Changes-->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -55,7 +68,7 @@
     rel="stylesheet"
   />
   <!-- Begin Jekyll SEO tag v2.7.1 -->
-<meta name="generator" content="Jekyll v4.2.1" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Ricardo Gonzalez personal homepage" />
 <meta property="og:description" content="Ricardo Gonzalez personal homepage" />
@@ -68,10 +81,12 @@
 
 </head>
 
+  
   <body class="page">
     <!-- background animations -->
 <div class="div_bg">
-    <canvas id="c"></canvas>
+    <div id="tiles"></div>
+    
 </div>
 
     <!-- collection list, shown by click "archive" buttom in header -->
@@ -1027,9 +1042,7 @@
 </div>
  
           
- <div class="post_list">
-
-</div>
+ 
         </article>
          <div class="footer">
   <nav class="nav_bar">
