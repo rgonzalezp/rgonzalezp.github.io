@@ -1,5 +1,6 @@
 ---
 title: Challenges and Experiences of Taking Selfies
+about: false
 ---
 # [Understanding How People with Visual Impairments Take Selfies: Experiences and Challenges]()
 

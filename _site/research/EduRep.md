@@ -1,5 +1,6 @@
 # [EduRep-Neuro](https://repository.unimilitar.edu.co/handle/10654/37386)
 
+
 Traditional neuroradiology image exploration is performed on Picture Archiving and Communication System (PACS), these systems usually have low usability and very limited access. For educational and research purposes, there is now a great number of tools in which we can visualize neuroradiology images. 
 
 EduRep-neuro is a tool that integrates four elements: [NAVIO](https://navio.dev/), our data visualization tool, in it we can explore patients data through variables of interest; Osimis Web Viewer to visualize the diagnostic images of patients in greater depth; Orthanc PACS system to store the anonymized diagnostic images of patients and finally our web platform to manage exercises that will be given to the radiology students.

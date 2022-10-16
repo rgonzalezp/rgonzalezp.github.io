@@ -2,7 +2,7 @@ const wrapper = document.getElementById("tiles");
 
 let columns = 0,
     rows = 0,
-    toggled = false;
+    toggled = true;
 
 const toggle = () => {
   toggled = !toggled;
@@ -13,10 +13,11 @@ const toggle = () => {
 const handleOnClick = index => {
   toggle();
   
+  
+
   anime({
     targets: ".tile",
     opacity: toggled? 1 : 0,
-    backgroundColor: toggled? "rgb(200, 200, 200)" : "rgb(0, 0, 0)",
     delay: anime.stagger(100, {
       grid: [columns, rows],
       from: index
@@ -24,17 +25,44 @@ const handleOnClick = index => {
   });
 
   anime({
-    targets: ".page",
+    targets: ".page, .container, a, btn_text, .title-highlight, #highlight, #recent-activity, #title, .collection_list",
     color: toggled? "rgb(200, 200, 200)" : "rgb(0, 0, 0)",
-    delay: anime.stagger(300)
+    backgroundColor: toggled? "rgb(0, 0, 0,0.3)" : "rgb(255, 255, 255)",
+    fontWeight: toggled? "400" : "300",
+    delay: anime.stagger(10)
+  });
+
+  anime({
+    targets: ".header, .div_article",
+    border: toggled ? "1.85px solid rgb(200,200,200, 1)" :"1.85px solid rgb(0,0,0, 0.87)" ,
+  });
+
+
+
+
+
+  anime.set([".page, .container, a, .title-highlight"],{
+    border:'none',
+    fontFamily: toggled? "VT323" : 'Oswald',
+  
+  });
+
+  anime.set([" #highlight, #recent-activity, #title, .btn_text , .footer_btn, .footer_p"],{
+    fontFamily: toggled? 'DotGothic' : 'Oswald',
   });
 
   anime({
     targets: [".separator-zone-1, .separator-zone-2"],
     border: toggled? "2.1px solid rgb(200, 200, 200)" : "2.1px solid rgb(0, 0, 0)",
-    borderRightColor: "rgb(0, 0, 0)",
-    borderBottomColor: "rgb(0, 0, 0)",
-    borderLeftColor: "rgb(0, 0, 0)",
+    borderRightColor: "rgb(0, 0, 0,0)",
+    borderBottomColor: "rgb(0, 0, 0,0)",
+    borderLeftColor: "rgb(0, 0, 0,0)",
+  });
+
+  anime.set(["#special-separator"],{
+    borderStyle:'none',
+
+  
   });
 }
 

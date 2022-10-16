@@ -2,6 +2,8 @@
 
 @font-face { font-family: "DotGothic"; src: url("../fonts/DotGothic16-Regular.ttf"); }
 
+@font-face { font-family: "Oswald"; src: url("../fonts/Oswald-VariableFont_wght.ttf"); }
+
 @-webkit-keyframes fadeIn { from { opacity: 0; }
   to { opacity: 1; } }
 
@@ -189,9 +191,9 @@ input[type="checkbox"]:checked::before { content: "\2714"; vertical-align: middl
 
 .footer .nav_bar li { list-style: none; display: inline-block; padding: 2px 12px; }
 
-.footer .footer_owner_info { font-size: 14px; margin: 0; padding: 0; }
+.footer .footer_owner_info { font-size: 40px; margin: 0; padding: 0; }
 
-.footer .footer_owner_info p { font-size: 12.6px; margin: 0 0.5em 0 0.05em; display: inline; font-family: VT323, Times, serif, "Source Han Sans CN Medium", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei" !important; }
+.footer .footer_owner_info p { font-size: 36px; margin: 0 0.5em 0 0.05em; font-family: "DotGothic", monospace; display: inline; }
 
 .footer .footer_copyright { margin: 0; font-size: 18px; }
 
@@ -279,16 +281,16 @@ input[type="checkbox"]:checked::before { content: "\2714"; vertical-align: middl
 
 .collection_list .h_collection_label { margin: 0 0 0.5em 0; font-size: 23px !important; text-transform: capitalize; border-bottom: 0.5px solid rgba(200, 200, 200, 0.6); }
 
-:root { --g1: rgb(100, 100, 100); --g2: rgb(0, 0, 0); }
+:root { --g1: rgb(100, 100, 100); --g2: rgb(0, 0, 0); --g3: rgb(230, 230, 230); }
 
 @keyframes background-pan { from { background-position: 0% center; }
   to { background-position: -200% center; } }
 
 .div_bg { animation: background-pan 3s linear infinite; background: linear-gradient(to right, var(--g2), var(--g1), var(--g2)); background-size: 200%; top: -4px; height: 100%; width: 100% !important; text-align: left; position: absolute; }
 
-body.toggled > .div_bg { top: -4px; height: 100%; width: 100% !important; text-align: left; position: absolute; }
+body.toggled > .div_bg { animation: none; background: black; background-size: 200%; top: -4px; height: 100%; width: 100% !important; text-align: left; position: absolute; }
 
-.header { position: absolute; text-align: center; width: 100%; height: auto; z-index: 3; border: 1.35px solid rgba(200, 200, 200, 0.87); border-bottom: transparent; }
+.header { position: absolute; text-align: center; width: 100%; height: auto; z-index: 3; border: 1.35px solid rgba(200, 200, 200, 0.87); }
 
 .header .vertical_center_table { width: 100%; height: 70px; }
 
@@ -300,7 +302,7 @@ body.toggled > .div_bg { top: -4px; height: 100%; width: 100% !important; text-a
 
 .header .nav_bar { text-align: left; display: block; list-style: none; padding: 0px 12px; word-wrap: none; overflow: hidden; white-space: nowrap; }
 
-.header .nav_bar a { margin-right: 20px; border-bottom: white; border-top: transparent !important; border-left: transparent !important; border-right: transparent !important; border: solid; }
+.header .nav_bar a { margin-right: 20px; }
 
 .header .nav_bar .collection_btn { width: 180px; text-align: left; }
 
@@ -344,7 +346,7 @@ body.toggled > .div_bg { top: -4px; height: 100%; width: 100% !important; text-a
 
 .header .header_btn i:hover { text-decoration: none !important; font-weight: inherit; color: #f7c111 !important; cursor: pointer; text-shadow: 0 0 4px #f7c111; }
 
-.header .btn_text { font-style: normal; margin: 0; display: inline-block; text-transform: capitalize; font-family: DotGothic, Times, serif, "Source Han Sans CN Medium", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei" !important; font-size: 26.6px; }
+.header .btn_text { font-style: normal; margin: 0; display: inline-block; text-transform: capitalize; font-family: "DotGothic", monospace; font-size: 26.6px; }
 
 .header .btn_icon { font-size: 28px; }
 
@@ -422,19 +424,21 @@ body.toggled > .div_bg { top: -4px; height: 100%; width: 100% !important; text-a
 
 #disqus_thread { margin: 2.5em 0 0 0; }
 
-.container { width: 100% !important; height: 100% !important; top: 0 !important; left: 0 !important; margin: 0; border: 2.1px solid #c8c8c8; background-color: rgba(0, 0, 0, 0.7); }
+.container { width: 100% !important; height: 100% !important; top: 0 !important; left: 0 !important; margin: 0; background-color: rgba(0, 0, 0, 0.3); }
 
 .anythingelse { margin-top: -2.5px !important; }
 
-#title { font-size: 88px; padding-top: 25px; height: 50px; font-family: DotGothic, Times, serif, "Source Han Sans CN Medium", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei" !important; padding-left: 30px; }
+#title { font-size: 88px; padding-top: 25px; height: 50px; font-family: DotGothic; padding-left: 30px; }
 
-#highlight { font-size: 70px; padding-top: 25px; height: 50px; font-family: DotGothic, Times, serif, "Source Han Sans CN Medium", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei" !important; padding-left: 30px; }
+#highlight { font-size: 70px; padding-top: 25px; height: 50px; font-family: DotGothic; padding-left: 30px; }
 
-#recent-activity { font-size: 60px; height: 100px; font-family: DotGothic, Times, serif, "Source Han Sans CN Medium", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei" !important; padding-top: 20px; text-align: center; }
+#recent-activity { font-size: 60px; height: 100px; font-family: DotGothic; padding-top: 20px; text-align: center; }
 
 .separator-zone-1 { margin-top: 85px; border: 2.1px solid #c8c8c8; border-bottom: none; border-right: none; border-left: none; width: 88%; margin-left: 30px; }
 
 .separator-zone-2 { margin-top: 85px; border: 2.1px solid #c8c8c8; border-bottom: none; border-right: none; border-left: none; width: 83%; margin-left: 15px; }
+
+#special-separator { border: none; }
 
 @media screen and (max-width: 1700px) { #title { font-size: 5vw; padding-top: 25px; height: 50px; font-family: DotGothic, Times, serif, "Source Han Sans CN Medium", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei" !important; padding-left: 30px; } #highlight { font-size: 4.4vw; padding-top: 25px; height: 50px; font-family: DotGothic, Times, serif, "Source Han Sans CN Medium", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei" !important; padding-left: 30px; } #recent-activity { font-size: 3.5vw; height: 100px; font-family: DotGothic, Times, serif, "Source Han Sans CN Medium", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei" !important; padding-top: 20px; text-align: center; } }
 
@@ -454,7 +458,7 @@ body.toggled > .div_bg { top: -4px; height: 100%; width: 100% !important; text-a
 
 .page { height: 100%; width: 100%; margin: 0; padding: 0; position: fixed; background-color: #181111; background-image: none; }
 
-.container { top: 2%; height: 97%; width: 84%; max-width: 1350px; position: relative; overflow: none; margin: 0 auto; box-sizing: border-box; background-color: black; }
+.container { top: 2%; height: 97%; width: 84%; max-width: 1350px; position: relative; overflow: none; margin: 0 auto; box-sizing: border-box; }
 
 .scrollableColumn { overflow-y: scroll; height: 1400px; }
 
@@ -474,7 +478,7 @@ body.toggled > .div_bg { top: -4px; height: 100%; width: 100% !important; text-a
 
 .show { visibility: visible !important; -webkit-animation: fadeIn 0.60s; animation: fadeIn 0.60s; }
 
-@media screen and (max-width: 800px) { .page .container { width: 100% !important; height: 100% !important; top: 0 !important; left: 0 !important; margin: 0; border: 2.1px solid #c8c8c8; background-color: rgba(0, 0, 0, 0.7); } .page .container .div_article { border: none; } }
+@media screen and (max-width: 800px) { .page .container { width: 100% !important; height: 100% !important; top: 0 !important; left: 0 !important; margin: 0; border: 2.1px solid #c8c8c8; } .page .container .div_article { border: none; } }
 
 @media screen and (max-width: 800px) and (min-width: 400px) { .page .container .div_article #main_atcl { padding: 12px 17px 17px 17px; } }
 

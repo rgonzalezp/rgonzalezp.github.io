@@ -36,6 +36,15 @@
                 </i>
               </a>
               {% endif %}
+              {% if page.about != false %}
+              <a class="header_btn research_btn" onclick="scroll_percentage(2)">
+                <i class="fa btn_icon fa-envelope">
+                  {% if page.about != false %}
+                  <p class="btn_text">Contact</p>
+                  {% endif %}
+                </i>
+              </a>
+              {% endif %}
               <!--maximize-->
               <!--{% if page.maximize != false %}-->
               <!--<a class="header_btn" id="mxmz_btn" onclick="toggle_maximize()">-->
@@ -47,21 +56,7 @@
               <!--</a>-->
               <!--{% endif %}-->
               <!-- access token -->
-              {% if page.encrypted_text == true %}
-              <a class="header_btn" id="acs_btn" onclick="apply_token()">
-                <i class="fa btn_icon fa-key">
-                  {% if page.btn_text != false %}
-                  <p class="btn_text">Token</p>
-                  {% endif %}
-                </i>
-              </a>
-              <textarea
-                class="access_token"
-                cols="8"
-                id="acs_tkn"
-                rows="1"
-              ></textarea>
-              {% endif %}
+              
               
             </li>
             <!-- right header -->

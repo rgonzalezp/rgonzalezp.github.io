@@ -1,5 +1,6 @@
 ---
 title: Acoustic Minimaps for Visually Impaired Gamers
+about: false
 ---
 # [Towards a Generalized Acoustic Minimap for Visually Impaired Gamers](https://dl.acm.org/doi/10.1145/3474349.3480177)
 
