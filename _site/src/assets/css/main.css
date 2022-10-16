@@ -177,7 +177,11 @@ input[type="checkbox"]:checked::before { content: "\2714"; vertical-align: middl
 
 #tiles { height: 100vh; width: 100vw; display: grid; grid-template-columns: repeat(var(--columns), 1fr); grid-template-rows: repeat(var(--rows), 1fr); }
 
-#ctner { height: 100vh; width: 100vw; display: grid; grid-template-columns: repeat(var(--colummns), 1fr); grid-template-rows: repeat(var(--rows), 1fr); }
+.tile { cursor: pointer; position: relative; }
+
+.tile:hover:before { background-color: #1e1e1e; }
+
+.tile:before { background-color: #0f0f0f; content: ""; inset: 0.5px; position: absolute; }
 
 .footer { position: relative; display: block; text-align: center; top: auto; height: auto; padding: 0; margin: 25px 0 0 0; }
 
@@ -275,7 +279,14 @@ input[type="checkbox"]:checked::before { content: "\2714"; vertical-align: middl
 
 .collection_list .h_collection_label { margin: 0 0 0.5em 0; font-size: 23px !important; text-transform: capitalize; border-bottom: 0.5px solid rgba(200, 200, 200, 0.6); }
 
-.div_bg { top: -4px; height: 100%; width: 100% !important; text-align: left; position: absolute; }
+:root { --g1: rgb(100, 100, 100); --g2: rgb(0, 0, 0); }
+
+@keyframes background-pan { from { background-position: 0% center; }
+  to { background-position: -200% center; } }
+
+.div_bg { animation: background-pan 3s linear infinite; background: linear-gradient(to right, var(--g2), var(--g1), var(--g2)); background-size: 200%; top: -4px; height: 100%; width: 100% !important; text-align: left; position: absolute; }
+
+body.toggled > .div_bg { top: -4px; height: 100%; width: 100% !important; text-align: left; position: absolute; }
 
 .header { position: absolute; text-align: center; width: 100%; height: auto; z-index: 3; border: 1.35px solid rgba(200, 200, 200, 0.87); border-bottom: transparent; }
 

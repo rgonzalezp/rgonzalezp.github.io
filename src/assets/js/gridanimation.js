@@ -15,12 +15,26 @@ const handleOnClick = index => {
   
   anime({
     targets: ".tile",
-    opacity: toggled ? 1 : 0,
-    backgroundColor: "rgb(255, 255, 255)",
+    opacity: toggled? 1 : 0,
+    backgroundColor: toggled? "rgb(200, 200, 200)" : "rgb(0, 0, 0)",
     delay: anime.stagger(100, {
       grid: [columns, rows],
       from: index
     })
+  });
+
+  anime({
+    targets: ".page",
+    color: toggled? "rgb(200, 200, 200)" : "rgb(0, 0, 0)",
+    delay: anime.stagger(300)
+  });
+
+  anime({
+    targets: [".separator-zone-1, .separator-zone-2"],
+    border: toggled? "2.1px solid rgb(200, 200, 200)" : "2.1px solid rgb(0, 0, 0)",
+    borderRightColor: "rgb(0, 0, 0)",
+    borderBottomColor: "rgb(0, 0, 0)",
+    borderLeftColor: "rgb(0, 0, 0)",
   });
 }
 
@@ -29,8 +43,8 @@ const createTile = index => {
   
   tile.classList.add("tile");
   
-  tile.style.opacity = toggled ? 0 : 1;
-  
+  tile.style.opacity = 1;
+
   tile.onclick = e => handleOnClick(index);
   
   return tile;

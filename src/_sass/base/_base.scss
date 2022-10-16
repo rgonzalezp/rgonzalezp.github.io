@@ -1,4 +1,8 @@
 // global base reset
+
+
+
+
 body {
   line-height: 1.7;
   font-size: $font-size-primary;
@@ -176,6 +180,8 @@ input[type="checkbox"]:checked::before {
   font-weight: bold;
 }
 
+
+
 #tiles {
   height: 100vh;
   width: 100vw;
@@ -184,15 +190,19 @@ input[type="checkbox"]:checked::before {
   grid-template-rows: repeat(var(--rows), 1fr);
 }
 
-#ctner {
-  height: 100vh;
-  width: 100vw;
-  display: grid;
-  grid-template-columns: repeat(var(--colummns), 1fr);
-  grid-template-rows: repeat(var(--rows), 1fr);
-}
-
 
 .tile {
-  
+  cursor: pointer;
+  position: relative;
+}
+
+.tile:hover:before {
+  background-color: rgb(30, 30, 30);
+}
+
+.tile:before {
+  background-color: rgb(15, 15, 15);
+  content: "";
+  inset: 0.5px;
+  position: absolute;
 }
