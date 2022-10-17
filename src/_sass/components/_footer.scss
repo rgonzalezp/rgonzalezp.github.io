@@ -39,3 +39,13 @@
     @include simple_link_style;
   }
 }
+
+#footer{
+  border: 2.1px solid #c8c8c8;
+  width: 92%;
+  margin: auto;
+  justify-content: center;
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+}

@@ -62,10 +62,11 @@ const handleOnClick = (index) => {
   );
 
   anime({
-    targets: [".separator-zone-1, .separator-zone-2"],
+    targets: [".separator-zone-1, .separator-zone-2, .footer"],
     border: toggled
       ? "2.1px solid rgb(200, 200, 200)"
       : "2.1px solid rgb(0, 0, 0)",
+    borderStyle: "solid",
     borderRightColor: "rgb(0, 0, 0,0)",
     borderBottomColor: "rgb(0, 0, 0,0)",
     borderLeftColor: "rgb(0, 0, 0,0)",

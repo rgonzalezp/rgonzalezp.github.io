@@ -203,6 +203,8 @@ input[type="checkbox"]:checked::before { content: "\2714"; vertical-align: middl
 
 .footer .footer_btn:hover { text-decoration: none !important; font-weight: inherit; color: #f7c111 !important; cursor: pointer; text-shadow: 0 0 4px #f7c111; }
 
+#footer { border: 2.1px solid #c8c8c8; width: 92%; margin: auto; justify-content: center; border-bottom: none; border-right: none; border-left: none; }
+
 .collection_list_container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(112, 109, 109, 0.6); visibility: hidden; z-index: 4; font-family: DotGothic, Times, serif, "Source Han Sans CN Medium", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei" !important; }
 
 .collection_list_background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
@@ -454,7 +456,7 @@ body.toggled > .div_bg { animation: none; background: black; background-size: 20
 
 @media screen and (max-width: 630px) { .separator-zone-1 { margin-top: 20px; width: 88%; margin-left: 30px; } .separator-zone-2 { margin-top: -30px; width: 78%; margin-left: 5px; } }
 
-@media screen and (max-width: 500px) { #title { font-size: 20px; padding-top: 25px; height: 50px; font-family: DotGothic, Times, serif, "Source Han Sans CN Medium", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei" !important; padding-left: 30px; } #hightlight { font-size: 20px; padding-top: 25px; height: 50px; font-family: DotGothic, Times, serif, "Source Han Sans CN Medium", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei" !important; padding-left: 15px; } #recent-activity { font-size: 17px; height: 50px; font-family: DotGothic, Times, serif, "Source Han Sans CN Medium", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei" !important; padding-top: 20px; padding-left: 15px; } .separator-zone-1 { margin-top: 10px; width: 88%; margin-left: 15px; } .separator-zone-2 { margin-top: 10px; width: 100%; margin-left: 0px; } .row { margin-right: 0 !important; margin-left: 0 !important; } }
+@media screen and (max-width: 500px) { #title { font-size: 20px; padding-top: 25px; height: 50px; font-family: DotGothic, Times, serif, "Source Han Sans CN Medium", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei" !important; padding-left: 30px; } #hightlight { font-size: 20px; padding-top: 25px; height: 50px; font-family: DotGothic, Times, serif, "Source Han Sans CN Medium", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei" !important; padding-left: 15px; } #recent-activity { font-size: 50px; height: 50px; font-family: DotGothic, Times, serif, "Source Han Sans CN Medium", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei" !important; padding-top: 20px; padding-left: 15px; } .separator-zone-1 { margin-top: 10px; width: 88%; margin-left: 15px; } .separator-zone-2 { margin-top: 10px; width: 100%; margin-left: 0px; } .row { margin-right: 0 !important; margin-left: 0 !important; } }
 
 .page { height: 100%; width: 100%; margin: 0; padding: 0; position: fixed; background-color: #181111; background-image: none; }
 
