@@ -1,5 +1,4 @@
 const wrapper = document.getElementById("tiles");
-
 let firstLoad = localStorage.getItem('firstLoad');
 let lightTheme = localStorage.getItem("lightTheme");
 
@@ -113,6 +112,9 @@ const createGrid = () => {
 createGrid();
 
 window.onload = () => {
+  if(localStorage.getItem("lightTheme") === null){
+    localStorage.setItem('lightTheme', 'no');
+  }
   if (firstLoad === "yes") {
     if(lightTheme === "no"){ 
       firstLoad = "no";
