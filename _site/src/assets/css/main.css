@@ -117,13 +117,13 @@
 
 body { line-height: 1.7; font-size: 21.8px !important; color: #c8c8c8; font-family: VT323, Times, serif, "Source Han Sans CN Medium", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei" !important; }
 
-h1 { font-size: 28px !important; font-family: DotGothic, Times, serif, "Source Han Sans CN Medium", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei" !important; text-align: center !important; font-weight: lighter; margin: 1.8em 0 1.5em 0; }
+h1 { font-size: 28px !important; text-align: center !important; font-weight: lighter; margin: 1.8em 0 1.5em 0; }
 
-h2 { font-size: 27px !important; font-family: DotGothic, Times, serif, "Source Han Sans CN Medium", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei" !important; font-weight: lighter; margin: 1.8em 0 0.8em 0; border-bottom: 0.5px solid rgba(200, 200, 200, 0.6); }
+h2 { font-size: 27px !important; font-weight: lighter; margin: 1.8em 0 0.8em 0; border-bottom: 0.5px solid rgba(200, 200, 200, 0.6); }
 
-h3 { font-size: 27px !important; font-family: DotGothic, Times, serif, "Source Han Sans CN Medium", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei" !important; font-weight: lighter; margin: 1.9em 0 0.8em 0; }
+h3 { font-size: 27px !important; font-weight: lighter; margin: 1.9em 0 0.8em 0; }
 
-h4 { font-size: 24.5px !important; font-family: DotGothic, Times, serif, "Source Han Sans CN Medium", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei" !important; font-weight: lighter; margin: 1.4em 0 0.8em 0; }
+h4 { font-size: 24.5px !important; font-weight: lighter; margin: 1.4em 0 0.8em 0; }
 
 p { margin: 5px 0px; display: block; }
 
