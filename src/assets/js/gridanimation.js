@@ -6,19 +6,15 @@ let columns = 0,
 
 const toggle = () => {
   if (localStorage.firstLoad === "yes") {
-    localStorage.firstLoad = "no";
-    if (localStorage.lightTheme === "yes") {
       toggled = !toggled;
-      
+      localStorage.firstLoad = "no";
       document.body.classList.toggle("toggled");
-    }
     return;
   }
-
   toggled = !toggled;
   localStorage.lightTheme = localStorage.lightTheme === "yes" ? "no" : "yes";
   document.body.classList.toggle("toggled");
-};
+}; 
 
 const handleOnClick = (index) => {
   toggle();
@@ -112,11 +108,19 @@ const createGrid = () => {
 createGrid();
 
 window.onload = () => {
-  if (localStorage.lightTheme === "yes") {
+  if (localStorage.firstLoad === "yes") {
+    if(localStorage.lightTheme === "no"){ 
+      localStorage.firstLoad = "no";
+      return;
+    }
     const wrapper = document.getElementsByClassName("tile");
     wrapper[0].click();
   } else {
-    localStorage.firstLoad = "no";
+    if (localStorage.lightTheme === "yes") {
+      localStorage.firstLoad = "yes";
+      const wrapper = document.getElementsByClassName("tile");
+      wrapper[0].click();
+    }
   }
 };
 
