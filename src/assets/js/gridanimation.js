@@ -1,24 +1,24 @@
 const wrapper = document.getElementById("tiles");
+let firstLoad = localStorage.getItem('firstLoad');
+let lightTheme = localStorage.getItem("lightTheme");
 
 let columns = 0,
   rows = 0,
   toggled = localStorage.lightTheme === "yes" ? true: false;
 
 const toggle = () => {
-  if (localStorage.firstLoad === "yes") {
-    localStorage.firstLoad = "no";
-    if (localStorage.lightTheme === "yes") {
+  if (firstLoad === "yes") {
       toggled = !toggled;
-      
+      firstLoad = "no";
+      localStorage.setItem('firstLoad', 'no');
       document.body.classList.toggle("toggled");
-    }
     return;
   }
-
   toggled = !toggled;
-  localStorage.lightTheme = localStorage.lightTheme === "yes" ? "no" : "yes";
+  lightTheme = lightTheme === "yes" ? "no" : "yes";
+  localStorage.setItem('lightTheme', lightTheme);
   document.body.classList.toggle("toggled");
-};
+}; 
 
 const handleOnClick = (index) => {
   toggle();
@@ -122,16 +122,29 @@ const createGrid = () => {
 createGrid();
 
 window.onload = () => {
-  if (localStorage.lightTheme === "yes") {
+  if(localStorage.getItem("lightTheme") === null){
+    localStorage.setItem('lightTheme', 'no');
+  }
+  if (firstLoad === "yes") {
+    if(lightTheme === "no"){ 
+      firstLoad = "no";
+      localStorage.setItem('firstLoad', 'no');
+      return;
+    }
     const wrapper = document.getElementsByClassName("tile");
     wrapper[0].click();
   } else {
-    localStorage.firstLoad = "no";
+    if (lightTheme === "yes") {
+      firstLoad = "yes";
+      localStorage.setItem('firstLoad', 'yes');
+      const wrapper = document.getElementsByClassName("tile");
+      wrapper[0].click();
+    }
   }
 };
 
 window.onunload = () => {
-  localStorage.firstLoad = "yes";
+  localStorage.setItem('firstLoad', 'yes');
 };
 
 window.onresize = () => createGrid();
