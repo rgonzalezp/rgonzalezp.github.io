@@ -202,7 +202,7 @@ input[type="checkbox"]:checked::before { content: "\2714"; vertical-align: middl
 
 .footer .footer_owner_info { font-size: 40px; margin: 0; padding: 0; }
 
-.footer .footer_owner_info p { font-size: 36px; margin: 0 0.5em 0 0.05em; font-family: "DotGothic", monospace; display: inline; }
+.footer .footer_owner_info p { font-size: 28px; margin: 0 0.5em 0 0.05em; font-family: "DotGothic", monospace; display: inline; }
 
 .footer .footer_copyright { margin: 0; font-size: 18px; }
 

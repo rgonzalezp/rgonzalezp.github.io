@@ -73,12 +73,12 @@ const handleOnClick = (index) => {
 
   anime({
     targets: [".footer_owner_info p"],
-    fontSize: toggled ? "33px" : "36px",
+    fontSize: toggled ? "28px" : "36px",
   })
 
   anime({
     targets: [".footer_owner_info"],
-    fontSize: toggled ? "34px" : "40px",
+    fontSize: toggled ? "40px" : "40px",
   })
 
   anime.set(["#special-separator"], {
