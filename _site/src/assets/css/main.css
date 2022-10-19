@@ -185,9 +185,18 @@ input[type="checkbox"]:checked::before { content: "\2714"; vertical-align: middl
 
 .tile:before { background-color: #0f0f0f; content: ""; inset: 0.5px; position: absolute; }
 
-.footer { position: relative; display: block; text-align: center; top: auto; height: auto; padding: 0; margin: 25px 0 0 0; }
+:root { --footer-text-icon: 40px; --footer-text-size: 36px; }
 
-.footer .nav_bar { bottom: 0; margin: 0; padding: 0; display: block; list-style: none; text-align: center; display: inline-block; }
+@keyframes banner { from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-30%, 0, 0); } }
+
+.footer { position: relative; display: block; text-align: center; top: auto; height: auto; padding: 0; margin: 25px 10px 0 0; }
+
+.footer .nav_bar:hover { animation-play-state: paused; }
+
+.footer .nav_bar { width: 320%; margin-top: 0; margin-bottom: 0; padding-left: 10%; padding-right: 10%; animation-duration: 6.5s; animation-name: banner; animation-iteration-count: infinite; animation-timing-function: linear; }
+
+.footer .nav_bar { bottom: 0; margin: 0; padding: 0; display: flex; list-style: none; text-align: center; }
 
 .footer .nav_bar li { list-style: none; display: inline-block; padding: 2px 12px; }
 
@@ -197,13 +206,15 @@ input[type="checkbox"]:checked::before { content: "\2714"; vertical-align: middl
 
 .footer .footer_copyright { margin: 0; font-size: 18px; }
 
+.footer .footer_btn { max-width: 160px; }
+
 .footer .footer_btn { text-decoration: none !important; }
 
 .footer .footer_btn:link { font-style: normal !important; text-decoration: none !important; }
 
 .footer .footer_btn:hover { text-decoration: none !important; font-weight: inherit; color: #f7c111 !important; cursor: pointer; text-shadow: 0 0 4px #f7c111; }
 
-#footer { border: 2.1px solid #c8c8c8; width: 92%; margin: auto; justify-content: center; border-bottom: none; border-right: none; border-left: none; }
+#footer { border: 2.1px solid #c8c8c8; width: 89%; margin: auto; justify-content: center; border-bottom: none; border-right: none; border-left: none; }
 
 .collection_list_container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(112, 109, 109, 0.6); visibility: hidden; z-index: 4; font-family: DotGothic, Times, serif, "Source Han Sans CN Medium", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei" !important; }
 

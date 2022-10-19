@@ -1,3 +1,21 @@
+
+:root {
+  --footer-text-icon: 40px;
+  --footer-text-size: 36px;
+}
+
+
+@keyframes banner {
+  from {
+    transform: translate3d(0,0,0);
+  }
+
+  to {
+    transform: translate3d(-30%,0,0);
+  }
+}
+
+
 .footer {
   position: relative;
   display: block;
@@ -5,15 +23,31 @@
   top: auto;
   height: auto;
   padding: 0;
-  margin: 25px 0 0 0;
+  margin: 25px 10px 0 0;
+
+  .nav_bar:hover {
+    animation-play-state: paused;
+  }
+  .nav_bar {
+    width: 320%;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+    animation-duration: 6.5s;
+    animation-name: banner;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+    }
+
   .nav_bar {
     bottom: 0;
     margin: 0;
     padding: 0;
-    display: block;
+    display: flex;
     list-style: none;
     text-align: center;
-    display: inline-block;
     li {
       list-style: none;
       display: inline-block;
@@ -21,11 +55,11 @@
     }
   }
   .footer_owner_info {
-    font-size: $footer-icon-size;
+    font-size: 40px;
     margin: 0;
     padding: 0;
     p {
-      font-size: $footer-text-size;
+      font-size: 36px;
       margin: 0 0.5em 0 0.05em;
       font-family: "DotGothic", monospace;
       display: inline;
@@ -37,13 +71,14 @@
   }
   .footer_btn {
     @include simple_link_style;
+    max-width: 160px;
   }
 }
 
 #footer{
   border: 2.1px solid #c8c8c8;
-  width: 92%;
-  margin: auto;
+  width: 89%;
+  margin:auto;
   justify-content: center;
   border-bottom: none;
   border-right: none;

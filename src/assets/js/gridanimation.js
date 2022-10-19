@@ -2,7 +2,7 @@ const wrapper = document.getElementById("tiles");
 
 let columns = 0,
   rows = 0,
-  toggled = true;
+  toggled = localStorage.lightTheme === "yes" ? true: false;
 
 const toggle = () => {
   if (localStorage.firstLoad === "yes") {
@@ -71,6 +71,16 @@ const handleOnClick = (index) => {
     borderBottomColor: "rgb(0, 0, 0,0)",
     borderLeftColor: "rgb(0, 0, 0,0)",
   });
+
+  anime({
+    targets: [".footer_owner_info p"],
+    fontSize: toggled ? "33px" : "36px",
+  })
+
+  anime({
+    targets: [".footer_owner_info"],
+    fontSize: toggled ? "34px" : "40px",
+  })
 
   anime.set(["#special-separator"], {
     borderStyle: "none",
