@@ -61,6 +61,11 @@
   @include fade_in;
 }
 
+.remove {
+  
+  @include fade_out;
+}
+
 // screen auto-adjustment
 @media screen and (max-width: 800px) {
   .page .container {

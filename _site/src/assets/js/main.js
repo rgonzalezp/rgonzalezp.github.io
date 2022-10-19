@@ -6,14 +6,18 @@ function toggle_toc() {
 // open collection list -> header.html -> .collection_list
 function open_collection_list() {
     document.getElementById("the_collection_list").classList.add("show");
+    document.getElementById("the_collection_list").classList.remove("remove");
     show_collection("all");
 }
 // close collection list -> collections.html -> .collection_list
 function close_collection_list() {
     document.getElementById("the_collection_list").classList.remove("show");
+    document.getElementById("the_collection_list").classList.add("remove");
     var collection_labels = document.getElementsByClassName("post_list_in_1_collection");
     for (idx = 0; idx < collection_labels.length; idx++) {
         collection_labels[idx].classList.remove("show");
+        collection_labels[idx].classList.remove("remove");
+        
     }
 }
 

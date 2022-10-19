@@ -30,6 +30,7 @@ const handleOnClick = (index) => {
     }),
   });
 
+  
   anime({
     targets:
       ".page, .container, a, btn_text, .title-highlight, #highlight, #recent-activity, #title, .collection_list",
@@ -37,6 +38,13 @@ const handleOnClick = (index) => {
     backgroundColor: toggled ? "rgb(0, 0, 0,0.3)" : "rgb(255, 255, 255)",
     fontWeight: toggled ? "400" : "300",
     delay: anime.stagger(10),
+  });
+
+  anime({
+    targets:
+      ".collection_list_container",
+    color: toggled ? "rgb(200, 200, 200)" : "rgb(0, 0, 0)",
+    backgroundColor: toggled ? "rgb(0, 0, 0,0.85)" : "rgb(255, 255, 255)",
   });
 
   anime({
@@ -53,7 +61,7 @@ const handleOnClick = (index) => {
 
   anime.set(
     [
-      " #highlight, #recent-activity, #title, .btn_text , .footer_btn, .footer_p, h2,h1",
+      " #highlight, #recent-activity, #title, .btn_text , .footer_btn, .footer_p, h2,h1,.collection_list_container",
     ],
     {
       fontFamily: toggled ? "DotGothic" : "Oswald",

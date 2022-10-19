@@ -28,3 +28,8 @@
   -webkit-animation: fadeIn 0.60s;
   animation: fadeIn 0.60s;  
 }
+
+@mixin fade_out {
+  -webkit-animation: fadeOut 0.60s;
+  animation: fadeOut 0.60s;  
+}
