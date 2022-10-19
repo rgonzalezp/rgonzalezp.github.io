@@ -1,14 +1,13 @@
 const wrapper = document.getElementById("tiles");
-let firstLoad = localStorage.getItem('firstLoad');
-let lightTheme = localStorage.getItem("lightTheme");
+var firstLoad = localStorage.getItem('firstLoad');
+var lightTheme = localStorage.getItem("lightTheme");
 
 let columns = 0,
   rows = 0,
-  toggled = localStorage.lightTheme === "yes" ? true: false;
+  toggled = localStorage.lightTheme === "yes" ? false: true;
 
 const toggle = () => {
   if (firstLoad === "yes") {
-      toggled = !toggled;
       firstLoad = "no";
       localStorage.setItem('firstLoad', 'no');
       document.body.classList.toggle("toggled");
@@ -123,7 +122,11 @@ createGrid();
 
 window.onload = () => {
   if(localStorage.getItem("lightTheme") === null){
+    console.log(localStorage.getItem("lightTheme"))
     localStorage.setItem('lightTheme', 'no');
+    localStorage.setItem('firstLoad', 'no');
+
+
   }
   if (firstLoad === "yes") {
     if(lightTheme === "no"){ 
@@ -140,11 +143,12 @@ window.onload = () => {
       const wrapper = document.getElementsByClassName("tile");
       wrapper[0].click();
     }
+    
   }
 };
 
 window.onunload = () => {
-  localStorage.setItem('firstLoad', 'yes');
+  localStorage.setItem('firstLoad', 'no');
 };
 
 window.onresize = () => createGrid();
