@@ -13,6 +13,16 @@
   src: url("../fonts/Oswald-VariableFont_wght.ttf");
 }
 
+@font-face {
+  font-family: "under_sans";
+  src: url("../fonts/DeterminationMonoWeb.woff");
+}
+
+@font-face {
+  font-family: "under_mono";
+  src: url("../fonts/DeterminationSansWeb.woff");
+}
+
 // font family
 $font-serif-body: VT323, Times, serif, "Source Han Sans CN Medium",
   "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei",

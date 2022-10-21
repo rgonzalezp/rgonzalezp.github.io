@@ -4,10 +4,11 @@ baseurl            : ""
 permalink           : /:title/
 description         : "Ricardo Gonzalez personal homepage"
 markdown            : kramdown
-statement           : "You went all the way down here? Okay have a cookie 🍪"
+statement           : "Stay Determined! ❤️"
 bgtext              : "ABCFGHKLMNPQRSVWXYZabcdefghijklmnopqrstuvwxyz@#$%&*+-;/[]<>~" # texts randomly displayed in background
 
-# 2. Your Collections
+
+# 2. Your Collectionss
 # You can specify the order shown in Archive window. 
 # Keep it null if you want to show items in alphabetic order.
 collection_order    : 

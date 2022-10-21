@@ -7,7 +7,7 @@
   width: 100%;
   height: auto;
   z-index: 3;
-  border: 1.35px solid rgba(200,200,200, 0.87);
+  
   .vertical_center_table {
     width: 100%;
     height: $header-height; // the real height of header
@@ -16,7 +16,7 @@
     border: none;
   }
   td {
-    border: none;
+    border: $secondary-border;
     padding: 0;
     vertical-align: middle;
   }
