@@ -1,6 +1,4 @@
-//Change name to theme animation
 
-// run scrolling animation for title
 
 const wrapper = document.getElementById("tiles");
 var firstLoad = localStorage.getItem("firstLoad");
@@ -87,8 +85,8 @@ const handleOnClick = (index) => {
   anime({
     targets: ".header, .div_article",
     border: toggled
-      ? "1.85px solid rgb(200,200,200, 1)"
-      : "1.85px solid rgb(0,0,0, 0.87)",
+      ? "6.35px solid rgb(200,200,200, 1)"
+      : "0.1px solid rgb(0,0,0, 0.87)",
   });
 
   anime.set([".page, .container, a, .title-highlight"], {

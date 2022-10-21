@@ -47,7 +47,6 @@
   overflow-x: hidden;
   @include thin_scrollbar;
   border: $secondary-border;
-  border-top: none;
   article {
     margin: 0;
     padding: 10px 19px 19px 19px;
