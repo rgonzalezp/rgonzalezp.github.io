@@ -11,14 +11,14 @@
       {% endif %}
       <!-- date -->
       {% if activity.date %}
-      <span>
+      <span class="recent_activity_date">
         «{{ activity.date | date: "%b %d, %Y" }}»
       </span>
       {% endif %}
     <!-- abstract -->
     {% if activity.abstract %}
     <div class="description">
-      <p>«{{ activity.abstract }}»</p>
+      <p class="recent_activity_text">«{{ activity.abstract }}»</p>
       
     </div>
     {% endif %}

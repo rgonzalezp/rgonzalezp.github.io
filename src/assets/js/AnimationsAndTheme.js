@@ -1,23 +1,62 @@
+//Change name to theme animation
+
+// run scrolling animation for title
+
 const wrapper = document.getElementById("tiles");
-var firstLoad = localStorage.getItem('firstLoad');
+var firstLoad = localStorage.getItem("firstLoad");
 var lightTheme = localStorage.getItem("lightTheme");
 
 let columns = 0,
   rows = 0,
-  toggled = localStorage.lightTheme === "yes" ? false: true;
+  toggled = localStorage.lightTheme === "yes" ? false : true;
+
+const adjustFooter = () => {
+  if (document.body.clientWidth < 500) {
+    anime({
+      targets: [".footer_owner_info p"],
+      fontSize: toggled ? "14px" : "18px",
+      marginLeft: "0px",
+      marginRight: "0px",
+    });
+
+    anime({
+      targets: [".footer_owner_info"],
+      fontSize: toggled ? "18px" : "18px",
+    });
+  } else {
+    //reset footer
+    anime({
+      targets: [".footer_owner_info p"],
+      fontSize: toggled ? "28px" : "36px",
+      marginLeft: "0.05em",
+      marginRight: "0.5em",
+    });
+
+    anime({
+      targets: [".footer_owner_info"],
+      fontSize: toggled ? "40px" : "40px",
+    });
+  }
+
+  //remove margins
+  //lower font size
+  // Add display flex
+  // set width
+  // Icon size, text size ownerinfo
+};
 
 const toggle = () => {
   if (firstLoad === "yes") {
-      firstLoad = "no";
-      localStorage.setItem('firstLoad', 'no');
-      document.body.classList.toggle("toggled");
+    firstLoad = "no";
+    localStorage.setItem("firstLoad", "no");
+    document.body.classList.toggle("toggled");
     return;
   }
   toggled = !toggled;
   lightTheme = lightTheme === "yes" ? "no" : "yes";
-  localStorage.setItem('lightTheme', lightTheme);
+  localStorage.setItem("lightTheme", lightTheme);
   document.body.classList.toggle("toggled");
-}; 
+};
 
 const handleOnClick = (index) => {
   toggle();
@@ -30,7 +69,6 @@ const handleOnClick = (index) => {
     }),
   });
 
-  
   anime({
     targets:
       ".page, .container, a, btn_text, .title-highlight, #highlight, #recent-activity, #title, .collection_list",
@@ -41,8 +79,7 @@ const handleOnClick = (index) => {
   });
 
   anime({
-    targets:
-      ".collection_list_container",
+    targets: ".collection_list_container",
     color: toggled ? "rgb(200, 200, 200)" : "rgb(0, 0, 0)",
     backgroundColor: toggled ? "rgb(0, 0, 0,0.85)" : "rgb(255, 255, 255)",
   });
@@ -82,12 +119,12 @@ const handleOnClick = (index) => {
   anime({
     targets: [".footer_owner_info p"],
     fontSize: toggled ? "28px" : "36px",
-  })
+  });
 
   anime({
     targets: [".footer_owner_info"],
     fontSize: toggled ? "40px" : "40px",
-  })
+  });
 
   anime.set(["#special-separator"], {
     borderStyle: "none",
@@ -128,35 +165,85 @@ const createGrid = () => {
 
 createGrid();
 
-window.onload = () => {
-  if(localStorage.getItem("lightTheme") === null){
-    console.log(localStorage.getItem("lightTheme"))
-    localStorage.setItem('lightTheme', 'no');
-    localStorage.setItem('firstLoad', 'no');
+const introAnimations = () => {
+  // run scrolling animation for title
+  anime({
+    targets: [
+      "#title",
+      "#highlight",
+      "#recent-activity",
+      ".collection_list_container",
+    ],
+    translateY: [-100, 0],
+    opacity: [0, 1],
+    duration: 1500,
+    easing: "easeOutCubic",
+  });
 
+  anime({
+    targets: [
+      ".info_text",
+      ".short-desc-highlight",
+      ".title-highlight",
+      ".recent_activity_text",
+      ".recent_activity_date",
+    ],
+    translateY: [-100, 0],
+    opacity: [0, 1],
+    duration: 1500,
+    easing: "easeOutCubic",
+  });
+  anime({
+    targets: ".header_btn ",
+    translateY: [-50, 2],
+    opacity: [0, 1],
+    duration: 1500,
+    easing: "easeOutCubic",
+    delay: anime.stagger(300),
+  });
+};
 
+const retrievePageStateAndSetTheme = () => {
+  if (localStorage.getItem("lightTheme") === null) {
+    console.log(localStorage.getItem("lightTheme"));
+    localStorage.setItem("lightTheme", "no");
+    localStorage.setItem("firstLoad", "no");
   }
   if (firstLoad === "yes") {
-    if(lightTheme === "no"){ 
+    if (lightTheme === "no") {
       firstLoad = "no";
-      localStorage.setItem('firstLoad', 'no');
+      localStorage.setItem("firstLoad", "no");
       return;
     }
     const wrapper = document.getElementsByClassName("tile");
-    wrapper[0].click();
+    const numb =
+      Math.floor(wrapper.length / 2) + Math.floor(wrapper.length / 26);
+    wrapper[numb].click();
   } else {
     if (lightTheme === "yes") {
       firstLoad = "yes";
-      localStorage.setItem('firstLoad', 'yes');
+      localStorage.setItem("firstLoad", "yes");
       const wrapper = document.getElementsByClassName("tile");
-      wrapper[0].click();
+      const numb =
+        Math.floor(wrapper.length / 2) + Math.floor(wrapper.length / 26);
+      wrapper[numb].click();
     }
-    
   }
 };
 
-window.onunload = () => {
-  localStorage.setItem('firstLoad', 'no');
+window.onload = () => {
+  introAnimations();
+  retrievePageStateAndSetTheme();
+  adjustFooter();
 };
 
-window.onresize = () => createGrid();
+//Clean off variables
+window.onunload = () => {
+  localStorage.setItem("firstLoad", "no");
+};
+
+//Fix grid size on resize
+window.onresize = () => {
+  createGrid();
+  adjustFooter();
+};
