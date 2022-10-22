@@ -1,12 +1,130 @@
-
-
 const wrapper = document.getElementById("tiles");
+let gamewrapper = document.getElementById("game_tiles");
+
 var firstLoad = localStorage.getItem("firstLoad");
 var lightTheme = localStorage.getItem("lightTheme");
+let heartUndertaleIcon;
+let gameMode = false;
 
 let columns = 0,
   rows = 0,
   toggled = localStorage.lightTheme === "yes" ? false : true;
+
+const loadGame = () => {
+ 
+
+  let spawn_pos = {
+    x: heartUndertaleIcon.getBoundingClientRect().left,
+    y: heartUndertaleIcon.getBoundingClientRect().top,
+  };
+
+  //Hide everything to start game
+  window.document.getElementsByClassName("div_bg")[0].style.display = "none";
+  window.document.getElementsByClassName("container")[0].style.display = "none";
+  window.document.getElementsByClassName("collection_list_container")[0].style.display = "none";
+
+  const heartUndertale = window.document.getElementById("undertale_heart");
+  
+  //Spawn undertale heart at spawn position
+  heartUndertale.style.zIndex = "10";
+  heartUndertale.style.position = "absolute";
+  heartUndertale.style.left = spawn_pos.x -17.5 + "px";
+  heartUndertale.style.top = spawn_pos.y -17.5 + "px";
+
+
+  //Flashing animation and move into position
+  var tl = anime.timeline({
+    easing: 'linear',
+    duration: 0
+  });
+  
+
+  tl
+  .add({
+    targets: ["#undertale_heart"],
+    opacity: 0,
+    duration: 200,
+    easing: 'easeOutInBounce',
+  })
+  .add({
+    targets: ["#undertale_heart"],
+    opacity: 0,
+    duration: 100,
+    easing: 'easeOutInBounce',
+  })
+  .add({
+    targets: ["#undertale_heart"],
+    opacity: 1,
+    duration: 100,
+    easing: 'easeOutInBounce',
+  })
+  .add({
+    targets: ["#undertale_heart"],
+    opacity: 0,
+    duration: 100,
+    easing: 'easeOutInBounce',
+  })
+  .add({
+    targets: ["#undertale_heart"],
+    opacity: 0,
+    duration: 200,
+    easing: 'easeOutInBounce',
+  })
+  .add({
+    targets: ["#undertale_heart"],
+    opacity: 1,
+    duration: 100,
+    easing: 'easeOutInBounce',
+  })
+  .add({
+    targets: ["#undertale_heart"],
+    translateX: [0, -580],
+    translateY: [0, -19],
+    duration: 700,
+    easing: 'linear',
+  }).add({
+    targets: [".game_container",".stats_box",".game_box",".background_box",".options_box"],
+    opacity: 1,
+    duration: 400,
+    easing: 'linear',
+    begin: function() {
+      document.querySelector('.game_container').style.display = 'block';
+      document.querySelector('.stats_box').style.display = 'block';
+      document.querySelector('.game_box').style.display = 'block';
+      document.querySelector('.background_box').style.display = 'block';
+      document.querySelector('.options_box').style.display = 'flex';
+      createGrid(gamewrapper);
+    }
+  }).add({
+    targets: ["#undertale_heart"],
+    opacity: 0,
+    duration: 100,
+    easing: 'linear',
+    begin: function() {
+
+      const fight_icon = document.querySelector('#fight_icon');
+      fight_icon.classList.add('heart_icon');
+      fight_icon.src = './src/assets/img/undertale/green_heart.png';
+      
+    }
+  });
+
+
+  //height: 34px;
+  //top: 50%;
+  //transform: translateY(75%);
+
+  //Synchronize with SFX
+  //Set to right translateX and translateY
+
+  
+
+ 
+  
+  
+
+  //Turn Opacity to 1 of menu battle scene and small fighting grid
+};
 
 const adjustFooter = () => {
   if (document.body.clientWidth < 500) {
@@ -129,9 +247,13 @@ const handleOnClick = (index) => {
   });
 };
 
-const createTile = (index) => {
+const createTile = (index,e) => {
   const tile = document.createElement("div");
-
+  if(e.id === "game_tiles") {
+    tile.classList.add("game_tile");
+    tile.style.opacity = 1;
+    return tile;
+  }
   tile.classList.add("tile");
 
   tile.style.opacity = 1;
@@ -141,27 +263,34 @@ const createTile = (index) => {
   return tile;
 };
 
-const createTiles = (quantity) => {
+const createTiles = (quantity,e) => {
   Array.from(Array(quantity)).map((tile, index) => {
-    wrapper.appendChild(createTile(index));
+    e.appendChild(createTile(index,e));
   });
 };
 
-const createGrid = () => {
-  wrapper.innerHTML = "";
+const createGrid = (e) => {
+ 
+  e.innerHTML = "";
 
   const size = document.body.clientWidth > 800 ? 100 : 50;
-
+  
   columns = Math.floor(document.body.clientWidth / size);
   rows = Math.floor(document.body.clientHeight / size);
+  
+  if(e.id === "game_tiles")
+  {
+    columns = Math.floor(e.getBoundingClientRect().width /size/2);
+    rows = Math.floor(e.getBoundingClientRect().height /size/2);
+  }
 
-  wrapper.style.setProperty("--columns", columns);
-  wrapper.style.setProperty("--rows", rows);
+  e.style.setProperty("--columns", columns);
+  e.style.setProperty("--rows", rows);
 
-  createTiles(columns * rows);
+  createTiles(columns * rows, e);
 };
 
-createGrid();
+createGrid(wrapper);
 
 const introAnimations = () => {
   // run scrolling animation for title
@@ -203,7 +332,7 @@ const introAnimations = () => {
 
 const retrievePageStateAndSetTheme = () => {
   if (localStorage.getItem("lightTheme") === null) {
-    console.log(localStorage.getItem("lightTheme"));
+    
     localStorage.setItem("lightTheme", "no");
     localStorage.setItem("firstLoad", "no");
   }
@@ -233,6 +362,12 @@ window.onload = () => {
   introAnimations();
   retrievePageStateAndSetTheme();
   adjustFooter();
+  heartUndertaleIcon = document.getElementById("undertale_heart_icon");
+  gamewrapper = document.getElementById("game_tiles");
+  heartUndertaleIcon.onclick = () => {
+    loadGame();
+  };
+  
 };
 
 //Clean off variables
@@ -242,6 +377,6 @@ window.onunload = () => {
 
 //Fix grid size on resize
 window.onresize = () => {
-  createGrid();
+  createGrid(wrapper);
   adjustFooter();
 };

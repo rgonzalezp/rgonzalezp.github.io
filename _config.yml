@@ -4,7 +4,7 @@ baseurl            : ""
 permalink           : /:title/
 description         : "Ricardo Gonzalez personal homepage"
 markdown            : kramdown
-statement           : "Stay Determined! ❤️"
+statement           : "Stay Determined!"
 bgtext              : "ABCFGHKLMNPQRSVWXYZabcdefghijklmnopqrstuvwxyz@#$%&*+-;/[]<>~" # texts randomly displayed in background
 
 

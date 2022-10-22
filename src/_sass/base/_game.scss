@@ -1,0 +1,123 @@
+$game-width:1100px;
+
+@keyframes background-pan-game {
+    from {
+      background-position: 0% center;
+    }
+    
+    to {
+      background-position: -300% center;
+    }
+  }
+
+.game_container {
+    width: $game-width;
+    margin: auto;
+    box-sizing: border-box; // interior border
+    display: none;
+    opacity:0;
+    margin-top: 10px!important;
+  
+  }
+
+.div_bg_game{
+    animation: background-pan-game 3s linear infinite;
+    background: linear-gradient(to right, var(--g2), var(--g1), var(--g1), var(--g1), var(--g2));
+    background-size: 300%;
+    top: -4px;
+    height: inherit;
+    width: 100% !important;
+    text-align: left;
+    position: absolute;
+  }
+  .background_box{
+    height: 50%;
+    display: none;
+    opacity:0;
+    
+  }
+  .game_box{
+    height: 30%;
+    width:$game-width ;
+    border: $game-border;
+    display: none;
+    margin:auto;
+    opacity:0;
+  }
+
+  .stats_box{
+    height: 8%;
+    display: none;
+    opacity:0;
+    width:$game-width;
+    margin:auto;
+    font-family: 'under_player';
+    font-size: 40px;
+    padding: 10px;
+    color:white;
+    padding-left: 0;
+    
+  }
+
+  .options_box{
+    height: 10%;
+    display: none;
+    opacity:0;
+    width:$game-width;
+    margin:auto;
+  }
+
+  div.options_box div:first-child {
+    text-align: left;
+  }
+  div.options_box div:last-child {
+    text-align: right;
+  }
+  .menu_btn{
+    object-fit: contain;
+    font-family: 'under_menu';
+    border: 2px solid #ff7f27;
+    color: #ff7f27;
+    font-size: 70px;
+    padding-right:7px;
+    line-height:1.15;
+    display:flex;
+    width:auto;
+    margin:auto;
+    padding-bottom:5px;
+  }
+  .btn_icons{
+    position: relative;
+    top: 50%;
+    transform: translateY(25%);
+    height: 60px;
+    padding: 4px 10px;
+  }
+  .heart_icon{
+
+    height : 34px!important;
+    top : 50%!important;
+    transform : translateY(75%)!important;
+  }
+
+  .mercy_btn{
+    margin-right:0;
+  }
+
+  .fight_btn{
+    margin-left:0;
+  }
+
+  #undertale_heart_icon{
+    cursor: pointer;
+  }
+  
+  #undertale_heart{
+    position: absolute;
+    width: 26px;
+    height: 26px;
+  }
+
+
+  //button colors active (yellow)#ffff40 inactive (orange) #ff7f27
+  

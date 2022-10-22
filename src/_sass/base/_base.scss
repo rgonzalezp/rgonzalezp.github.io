@@ -206,3 +206,22 @@ input[type="checkbox"]:checked::before {
   inset: 0.5px;
   position: absolute;
 }
+
+#game_tiles {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-template-rows: repeat(var(--rows), 1fr);
+}
+
+.game_tile {
+  position: relative;
+}
+
+.game_tile:before {
+  background-color: rgb(15, 15, 15);
+  content: "";
+  inset: 1px;
+  position: absolute;
+}

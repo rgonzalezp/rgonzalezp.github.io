@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   {% include head.html %}
-  
+  <img id="undertale_heart" src="{{ site.url }}{{ site.baseurl }}/src/assets/img/undertale/green_heart.png"/>
   <body class="page">
     {% include background.html %}
     {% include collection_list.html %}
@@ -19,6 +19,7 @@
         {% if page.footer != false %} {% include footer.html %} {% endif %}
       </div>
     </div>
+    {% include game.html %} 
   </body>
 
 </html>
