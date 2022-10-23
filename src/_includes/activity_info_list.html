@@ -9,6 +9,13 @@
       </span>
 
       {% endif %}
+      <!-- subtext -->
+      {% if activity.subtext %}
+      <span class="subtext_recent_activity">
+        {{activity.subtext}}
+      </span>
+
+      {% endif %}
       <!-- date -->
       {% if activity.date %}
       <span class="recent_activity_date">

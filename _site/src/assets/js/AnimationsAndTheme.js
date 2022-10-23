@@ -214,12 +214,17 @@ const handleOnClick = (index) => {
 
   anime.set(
     [
-      " #highlight, #recent-activity, #title, .btn_text , .footer_btn, .footer_p, h2,h1,.collection_list_container",
+      "#highlight, #recent-activity, #title, .btn_text , .footer_btn, .footer_p, h2,h1,.collection_list_container",
     ],
     {
       fontFamily: toggled ? "DotGothic" : "Oswald",
     }
   );
+
+  anime.set(
+    [".subtext_recent_activity"],
+    {fontFamily: toggled ? "under_mono" : "Oswald",}
+  )
 
   anime({
     targets: [".separator-zone-1, .separator-zone-2, .footer"],
@@ -231,6 +236,8 @@ const handleOnClick = (index) => {
     borderBottomColor: "rgb(0, 0, 0,0)",
     borderLeftColor: "rgb(0, 0, 0,0)",
   });
+
+  
 
   anime({
     targets: [".footer_owner_info p"],
@@ -245,6 +252,10 @@ const handleOnClick = (index) => {
   anime.set(["#special-separator"], {
     borderStyle: "none",
   });
+
+
+  
+  
 };
 
 const createTile = (index,e) => {
