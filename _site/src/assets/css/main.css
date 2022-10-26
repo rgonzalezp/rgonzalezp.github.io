@@ -392,7 +392,7 @@ body.toggled > .div_bg { animation: none; background: black; background-size: 20
 
 .header .nav_bar ul .span_right { float: right; cursor: pointer; max-width: 60%; }
 
-.header .nav_bar .site_title { font-size: 26.6px; }
+.header .nav_bar .site_title { font-size: 25.2px; }
 
 .header .nav_bar .site_title { text-decoration: none !important; }
 
@@ -400,7 +400,7 @@ body.toggled > .div_bg { animation: none; background: black; background-size: 20
 
 .header .nav_bar .site_title:hover { text-decoration: none !important; font-weight: inherit; color: #f7c111 !important; cursor: pointer; text-shadow: 0 0 4px #f7c111; }
 
-.header .nav_bar .site_owner { font-size: 26.6px; }
+.header .nav_bar .site_owner { font-size: 25.2px; }
 
 .header .nav_bar .site_owner { text-decoration: none !important; }
 
@@ -416,7 +416,7 @@ body.toggled > .div_bg { animation: none; background: black; background-size: 20
 
 .header .header_btn i:hover { text-decoration: none !important; font-weight: inherit; color: #f7c111 !important; cursor: pointer; text-shadow: 0 0 4px #f7c111; }
 
-.header .btn_text { font-style: normal; margin: 0; display: inline-block; text-transform: capitalize; font-family: "DotGothic", monospace; font-size: 26.6px; }
+.header .btn_text { font-style: normal; margin: 0; display: inline-block; text-transform: capitalize; font-family: "DotGothic", monospace; font-size: 25.2px; }
 
 .header .btn_icon { font-size: 28px; }
 
@@ -468,7 +468,7 @@ body.toggled > .div_bg { animation: none; background: black; background-size: 20
 
 .abstract p { border-bottom: 0.5px solid rgba(200, 200, 200, 0.6); }
 
-.demo-video { display: block; margin: auto; }
+.demo_video { display: block; margin: auto; }
 
 .post_list .td_title { text-transform: capitalize; }
 

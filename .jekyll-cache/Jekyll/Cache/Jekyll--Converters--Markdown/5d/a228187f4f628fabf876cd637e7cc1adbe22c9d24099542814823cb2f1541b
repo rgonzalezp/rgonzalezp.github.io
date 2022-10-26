@@ -12,7 +12,7 @@
 
 <p>Explained by Lei Shi, the first Author! Amazing</p>
 <div>
-<iframe class="demo-video" width="560" height="315" src="https://www.youtube.com/embed/pHFmWrdXs8k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<iframe class="demo_video" width="560" height="315" src="https://www.youtube.com/embed/pHFmWrdXs8k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </div>
 <h2 id="related-papers--publications">Related papers &amp; publications</h2>
 

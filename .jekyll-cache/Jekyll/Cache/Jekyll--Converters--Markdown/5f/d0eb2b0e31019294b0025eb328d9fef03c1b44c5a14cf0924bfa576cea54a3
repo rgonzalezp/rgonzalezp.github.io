@@ -2,7 +2,7 @@
 
 <h2 id="demo">Demo</h2>
 
-<iframe class="demo-video" width="560" height="315" src="https://www.youtube.com/embed/uTJXJC7JgeE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<iframe class="demo_video" width="560" height="315" src="https://www.youtube.com/embed/uTJXJC7JgeE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
 <p>Authors: <strong><em>Ricardo E. Gonzalez Penuela</em></strong>, Wren Poremba, Christina Trice, and Shiri Azenkot.</p>
 

@@ -16,7 +16,7 @@ We close by describing a user study that we are performing with these techniques
 
 ## Demo
 
-<iframe class="demo-video" width="560" height="315" src="https://www.youtube.com/embed/sqfVz-hgmao"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="demo_video" width="560" height="315" src="https://www.youtube.com/embed/sqfVz-hgmao"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 
