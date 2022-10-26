@@ -8,7 +8,10 @@
             <li class="li_left">
               <!-- open collection tree -->
               {% if page.collection_list != false %}
-              <a class="header_btn collection_btn" onclick="open_collection_list()">
+              <a
+                class="header_btn collection_btn"
+                onclick="open_collection_list()"
+              >
                 <i class="fa btn_icon fa-bars">
                   {% if page.btn_text != false %}
                   <p class="btn_text">Collection</p>
@@ -18,7 +21,10 @@
               {% endif %}
               <!-- home -->
               {% if page.home_btn != false %}
-              <a class="header_btn home_btn" href="{{ site.url }}{{ site.baseurl }}/">
+              <a
+                class="header_btn home_btn"
+                href="{{ site.url }}{{ site.baseurl }}/"
+              >
                 <i class="fa btn_icon fa-home">
                   {% if page.btn_text != false %}
                   <p class="btn_text">Home</p>
@@ -28,15 +34,17 @@
               {% endif %}
               <!-- research -->
               {% if page.research_btn != false %}
-              <a class="header_btn research_btn" href="{{ site.url }}{{ site.baseurl }}/Research">
+              <a
+                class="header_btn research_btn"
+                href="{{ site.url }}{{ site.baseurl }}/research"
+              >
                 <i class="fa btn_icon fa-flask">
                   {% if page.btn_text != false %}
                   <p class="btn_text">Research</p>
                   {% endif %}
                 </i>
               </a>
-              {% endif %}
-              {% if page.about != false %}
+              {% endif %} {% if page.about != false %}
               <a class="header_btn research_btn" onclick="scroll_percentage(2)">
                 <i class="fa btn_icon fa-envelope">
                   {% if page.about != false %}
@@ -56,14 +64,15 @@
               <!--</a>-->
               <!--{% endif %}-->
               <!-- access token -->
-              
-              
             </li>
             <!-- right header -->
             <span class="span_right">
               {% if page.toc != false %}
               <!-- scroll up -->
-              <a class="header_btn previous_btn" onclick="scroll_percentage(-0.88)">
+              <a
+                class="header_btn previous_btn"
+                onclick="scroll_percentage(-0.88)"
+              >
                 <i class="fa btn_icon fa-backward">
                   {% if page.btn_text != false %}
                   <p class="btn_text">Prev</p>
@@ -87,17 +96,33 @@
                 </i>
               </a>
               {% else %}
+              <!-- Collaborators -->
+              {% if page.cv_btn != false %}
+              <a
+                class="header_btn collab_btn"
+                href="{{ site.url }}{{ site.baseurl }}/collaborators"
+              >
+              <!-- Select Correct icon here, check FA icons-->
+                <i class="fa btn_icon fa-folder">
+                  {% if page.btn_text != false %}
+                  <p class="btn_text">Collaborators</p>
+                  {% endif %}
+                </i>
+              </a>
+              {% endif %}
               <!-- Cv -->
               {% if page.cv_btn != false %}
-              <a class="header_btn cv_btn" href="https://raw.githubusercontent.com/rgonzalezp/My-true-CV/master/Researcher_Position_CV.pdf">
+              <a
+                class="header_btn cv_btn"
+                href="https://raw.githubusercontent.com/rgonzalezp/My-true-CV/master/Researcher_Position_CV.pdf"
+              >
                 <i class="fa btn_icon fa-folder">
                   {% if page.btn_text != false %}
                   <p class="btn_text">CV</p>
                   {% endif %}
                 </i>
               </a>
-              {% endif %}
-               {% endif %}
+              {% endif %} {% endif %}
             </span>
           </ul>
         </nav>
@@ -105,9 +130,8 @@
       </td>
     </tr>
   </table>
- 
 </div>
-<!-- table of content -->
+<!-- table of content, not mine (or at least not all) -->
 {% if page.toc != false %}
 <div class="div_toc toc" id="popup_toc">
   {% if page.toc_level %} {% assign toclv = page.toc_level %} {% elsif
