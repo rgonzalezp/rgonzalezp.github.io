@@ -266,6 +266,8 @@ const createTile = (index,e) => {
     return tile;
   }
   tile.classList.add("tile");
+  //Make element invisible to screen reader
+  tile.setAttribute("aria-hidden", "true");
 
   tile.style.opacity = 1;
 

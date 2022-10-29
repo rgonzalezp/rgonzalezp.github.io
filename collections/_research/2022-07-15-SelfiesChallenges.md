@@ -41,15 +41,10 @@ the necessary information to make small adjustments to the camera position.
 - **Include settings to filter information:** provide an easy way to turn on or off information of the guidance system (e.g., turn on/off guidance about the photo’s background or people’s facial expressions). More generally,
 information should be modifiable with varying degrees of specificity to adapt to the needs and preferences of the user.
 
-## Demo
-
-Soon!
-
-
 
 ## Related Papers & Publications
 
-[To appear on Assets'22, stay tuned for the paper.]()
+[Presented on ASSETS'22, Understanding How People with Visual Impairments Take Selfies: Experiences and Challenges](https://dl.acm.org/doi/10.1145/3517428.3550372)
 
 
 

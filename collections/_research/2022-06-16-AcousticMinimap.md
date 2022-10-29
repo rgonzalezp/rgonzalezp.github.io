@@ -1,10 +1,10 @@
 ---
-title: Acoustic Minimaps for Visually Impaired Gamers
+title: Spatial Awareness Tools Within Video Games. Preferences of Visually Impaired Gamers
 about: false
 ---
-# [Towards a Generalized Acoustic Minimap for Visually Impaired Gamers](https://dl.acm.org/doi/10.1145/3474349.3480177)
+# [Uncovering Visually Impaired Gamers’ Preferences for Spatial Awareness Tools Within Video Games](https://dl.acm.org/doi/10.1145/3474349.3480177)
 
-![Preview of Talkit++, showing a 3D printed airplane while a person interacts with it]({{site.url}}{{site.baseurl}}/src/assets/img/minimap/minimaparticle.png)
+![Preview of the different spatial awareness tools. A directional scanner, a shockwave detector, a smartphone tactile map, and menu with the items]({{site.url}}{{site.baseurl}}/src/assets/img/minimap/minimaparticle.png)
 
 Authors: Vishnu Nair, Shao-en Ma, Hannah Huddleston, Karen Lin, Mason Hayes, Matthew Donnelly, ***Ricardo E. Gonzalez***, Yicheng He, and Brian A. Smith
 
@@ -18,9 +18,9 @@ We close by describing a user study that we are performing with these techniques
 
 <iframe class="demo_video" width="560" height="315" src="https://www.youtube.com/embed/sqfVz-hgmao"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
-
 ## Related papers & publications
+
+[Presented on ASSETS'22, Uncovering Visually Impaired Gamers’ Preferences for Spatial Awareness Tools Within Video Games](https://dl.acm.org/doi/10.1145/3517428.3544802)
 
 [Presented on UIST'21, Towards a Generalized Acoustic Minimap for Visually Impaired Gamers](https://dl.acm.org/doi/10.1145/3474349.3480177)
 

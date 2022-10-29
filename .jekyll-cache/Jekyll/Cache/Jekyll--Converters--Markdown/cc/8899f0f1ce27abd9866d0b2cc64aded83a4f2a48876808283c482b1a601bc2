@@ -1,6 +1,7 @@
-I"�<h1 id="towards-a-generalized-acoustic-minimap-for-visually-impaired-gamers"><a href="https://dl.acm.org/doi/10.1145/3474349.3480177">Towards a Generalized Acoustic Minimap for Visually Impaired Gamers</a></h1>
+I" 
+<h1 id="uncovering-visually-impaired-gamers-preferences-for-spatial-awareness-tools-within-video-games"><a href="https://dl.acm.org/doi/10.1145/3474349.3480177">Uncovering Visually Impaired Gamers’ Preferences for Spatial Awareness Tools Within Video Games</a></h1>
 
-<p><img src="http://localhost:4000/src/assets/img/minimap/minimaparticle.png" alt="Preview of Talkit++, showing a 3D printed airplane while a person interacts with it" /></p>
+<p><img src="http://localhost:4000/src/assets/img/minimap/minimaparticle.png" alt="Preview of the different spatial awareness tools. A directional scanner, a shockwave detector, a smartphone tactile map, and menu with the items" /></p>
 
 <p>Authors: Vishnu Nair, Shao-en Ma, Hannah Huddleston, Karen Lin, Mason Hayes, Matthew Donnelly, <strong><em>Ricardo E. Gonzalez</em></strong>, Yicheng He, and Brian A. Smith</p>
 
@@ -15,6 +16,8 @@
 <iframe class="demo_video" width="560" height="315" src="https://www.youtube.com/embed/sqfVz-hgmao" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
 <h2 id="related-papers--publications">Related papers &amp; publications</h2>
+
+<p><a href="https://dl.acm.org/doi/10.1145/3517428.3544802">Presented on ASSETS’22, Uncovering Visually Impaired Gamers’ Preferences for Spatial Awareness Tools Within Video Games</a></p>
 
 <p><a href="https://dl.acm.org/doi/10.1145/3474349.3480177">Presented on UIST’21, Towards a Generalized Acoustic Minimap for Visually Impaired Gamers</a></p>
 
