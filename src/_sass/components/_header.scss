@@ -1,6 +1,11 @@
 
 
-
+.myicon{
+  display: inline-flex;
+ 
+  margin-bottom:4px;
+  //make them 26px for normal size, and 16px for small size
+}
 .header {
   position: absolute;
   text-align: center;
