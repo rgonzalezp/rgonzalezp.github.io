@@ -465,7 +465,8 @@ const createTile = (index,e) => {
 
   tile.style.opacity = 1;
 
-  tile.onclick = (e) => handleOnClick(index);
+  //Disabled for now, should create a cool stagger effect as before and keep my oldschool game style theme
+  //tile.onclick = (e) => handleOnClick(index);
 
   return tile;
 };
