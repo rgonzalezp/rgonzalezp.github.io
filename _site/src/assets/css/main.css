@@ -232,7 +232,7 @@ div.options_box div:last-child { text-align: right; }
 
 .btn_icons { position: relative; top: 50%; transform: translateY(25%); height: 60px; padding: 4px 10px; }
 
-.heart_icon { height: 34px !important; top: 50% !important; transform: translateY(75%) !important; }
+.heart_icon { height: 37.5px !important; top: 50% !important; transform: translateY(75%) !important; color: #faf443; }
 
 .mercy_btn { margin-right: 0; }
 
@@ -240,7 +240,7 @@ div.options_box div:last-child { text-align: right; }
 
 #undertale_heart_icon { cursor: pointer; }
 
-#undertale_heart { position: absolute; width: 26px; height: 26px; }
+#undertale_heart { position: absolute; height: 30.5px !important; }
 
 :root { --footer-text-icon: 40px; --footer-text-size: 36px; }
 

@@ -5,10 +5,207 @@ var firstLoad = localStorage.getItem("firstLoad");
 var lightTheme = localStorage.getItem("lightTheme");
 let heartUndertaleIcon;
 let gameMode = false;
+let menuMode = false;
 
 let columns = 0,
   rows = 0,
   toggled = localStorage.lightTheme === "yes" ? false : true;
+
+  //##########################AUDIO###################################
+const audioQueue = [];
+// Function to add audio to the queue
+function addToQueue(audioSrc) {
+  const audio = new Audio(audioSrc);
+  audioQueue.push(audio);
+}
+
+// Function to play the next audio in the queue
+function playNext() {
+  if (audioQueue.length > 0) {
+    const audio = audioQueue.shift();
+    audio.addEventListener('ended', playNext);
+    audio.play();
+  }
+}
+
+//##########################AUDIO###################################
+
+//##########################PLAYER_CONTROLLER###################################
+// Add an event listener for keyboard input on the document
+// Define flag variables to track key states
+let leftArrowPressed = false;
+let upArrowPressed = false;
+let rightArrowPressed = false;
+let downArrowPressed = false;
+let enterPressed = false;
+
+function readKeyInputMenu(keyEvent) {
+  if(!enterPressed && keyEvent === 'Enter'){
+    enterPressed = true;
+    addToQueue('./src/assets/music/snd_select.wav');
+    playNext();
+  } else if (!leftArrowPressed && keyEvent === 'ArrowLeft') {
+    leftArrowPressed = true;
+    btn_icons = document.querySelectorAll('.btn_icons')
+    current = 0;
+    for (let i = btn_icons.length-1; i > 0; i--) {
+      current_btn = btn_icons[i];
+      current = i;
+      if(current_btn.classList.contains('heart_icon') && i !== 0){
+        current_btn.classList.remove('heart_icon');
+        break;
+      }
+    }
+    if(current - 1 >= 0){
+      current -= 1;
+      btn_icons[current].classList.add('heart_icon');
+      btn_icons[current].src = './src/assets/img/undertale/green_heart.png';
+      menu_btns[current].style.border = "2px solid #faf443"
+      menu_btns[current].style.color = "#faf443"
+    }
+
+    addToQueue('./src/assets/music/snd_squeak.wav');
+    playNext();
+    if(current === 2){
+      btn_icons[3].src = './src/assets/img/undertale/mercy_icon.png';
+      menu_btns[3].style.border = "2px solid #ff7f27"
+      menu_btns[3].style.color = "#ff7f27"
+    } else if (current === 1){
+      btn_icons[2].src = './src/assets/img/undertale/item_icon.png';
+      menu_btns[2].style.border = "2px solid #ff7f27"
+      menu_btns[2].style.color = "#ff7f27"
+      
+    } else if (current === 0) {
+      btn_icons[1].src = './src/assets/img/undertale/act_icon.png';
+      menu_btns[1].style.border = "2px solid #ff7f27"
+      menu_btns[1].style.color = "#ff7f27"
+    }
+   
+  } else if (!upArrowPressed && keyEvent === 'ArrowUp') {
+    upArrowPressed = true;
+    
+  } else if (!rightArrowPressed && keyEvent === 'ArrowRight') {
+    rightArrowPressed = true;
+    btn_icons = document.querySelectorAll('.btn_icons')
+    current = 0;
+    for (let i = 0; i < btn_icons.length; i++) {
+      current_btn = btn_icons[i];
+      current = i;
+      if(current_btn.classList.contains('heart_icon') && i !== 3){
+        current_btn.classList.remove('heart_icon');
+        break;
+      }
+    }
+    if(current + 1 < btn_icons.length){
+      current += 1;
+      btn_icons[current].classList.add('heart_icon');
+      btn_icons[current].src = './src/assets/img/undertale/green_heart.png';
+      menu_btns = document.querySelectorAll('.menu_btn');
+      menu_btns[current].style.border = "2px solid #faf443"
+      menu_btns[current].style.color = "#faf443"
+    }
+
+    addToQueue('./src/assets/music/snd_squeak.wav');
+    playNext();
+    if(current === 1){
+      btn_icons[0].src = './src/assets/img/undertale/fight_icon.png';
+      menu_btns[0].style.border = "2px solid #ff7f27"
+      menu_btns[0].style.color = "#ff7f27"
+      
+    } else if (current === 2){
+      btn_icons[1].src = './src/assets/img/undertale/act_icon.png';
+      menu_btns[1].style.border = "2px solid #ff7f27"
+      menu_btns[1].style.color = "#ff7f27"
+      
+    } else if (current === 3) {
+      btn_icons[2].src = './src/assets/img/undertale/item_icon.png';
+      menu_btns[2].style.border = "2px solid #ff7f27"
+      menu_btns[2].style.color = "#ff7f27"
+    }
+
+    
+  } else if (!downArrowPressed && keyEvent === 'ArrowDown') {
+    downArrowPressed = true;
+    
+  }
+}
+
+// Add an event listener for keyboard input on the document
+document.addEventListener('keydown', function(event) {
+  
+  if(menuMode){
+    readKeyInputMenu(event.key);
+  } else {
+      // Check which key was pressed
+    switch (event.key) {
+      case 'ArrowLeft':
+        // Code to execute when the left arrow key is pressed
+        leftArrowPressed();
+        break;
+      case 'ArrowUp':
+        // Code to execute when the up arrow key is pressed
+        upArrowPressed();
+        break;
+      case 'ArrowRight':
+        // Code to execute when the right arrow key is pressed
+        rightArrowPressed();
+        break;
+      case 'ArrowDown':
+        // Code to execute when the down arrow key is pressed
+        downArrowPressed();
+        break;
+      default:
+        // Handle other keys or do nothing
+        break;
+    }
+  }
+});
+
+
+// Add an event listener for keyup to reset the flag when the key is released
+document.addEventListener('keyup', function(event) {
+  switch (event.key) {
+    case'Enter':
+      enterPressed = false;
+      break;
+    case 'ArrowLeft':
+      leftArrowPressed = false;
+      break;
+    case 'ArrowUp':
+      upArrowPressed = false;
+      break;
+    case 'ArrowRight':
+      rightArrowPressed = false;
+      break;
+    case 'ArrowDown':
+      downArrowPressed = false;
+      break;
+  }
+});
+
+// Define functions for each arrow key action
+function leftArrowPressedGame() {
+  
+}
+
+function upArrowPressedGame() {
+  
+}
+
+function rightArrowPressedGame() {
+  
+}
+
+function downArrowPressedGame() {
+  
+}
+
+
+//##########################PLAYER_CONTROLLER###################################
+
+
+
+
 
 const loadGame = () => {
  
@@ -38,49 +235,42 @@ const loadGame = () => {
     duration: 0
   });
   
-
   tl
   .add({
     targets: ["#undertale_heart"],
     opacity: 0,
-    duration: 200,
+    duration: 100,
     easing: 'easeOutInBounce',
   })
   .add({
     targets: ["#undertale_heart"],
     opacity: 0,
-    duration: 100,
+    duration: 50,
     easing: 'easeOutInBounce',
   })
   .add({
     targets: ["#undertale_heart"],
     opacity: 1,
-    duration: 100,
+    duration: 50,
     easing: 'easeOutInBounce',
   })
   .add({
     targets: ["#undertale_heart"],
     opacity: 0,
-    duration: 100,
-    easing: 'easeOutInBounce',
-  })
-  .add({
-    targets: ["#undertale_heart"],
-    opacity: 0,
-    duration: 200,
+    duration: 50,
     easing: 'easeOutInBounce',
   })
   .add({
     targets: ["#undertale_heart"],
     opacity: 1,
-    duration: 100,
+    duration: 50,
     easing: 'easeOutInBounce',
   })
   .add({
     targets: ["#undertale_heart"],
     translateX: [0, -580],
     translateY: [0, -19],
-    duration: 700,
+    duration: 500,
     easing: 'linear',
   }).add({
     targets: [".game_container",".stats_box",".game_box",".background_box",".options_box"],
@@ -103,9 +293,13 @@ const loadGame = () => {
     begin: function() {
 
       const fight_icon = document.querySelector('#fight_icon');
+      fight_icon.style.color = 'faf443';
       fight_icon.classList.add('heart_icon');
       fight_icon.src = './src/assets/img/undertale/green_heart.png';
-      
+      addToQueue('./src/assets/music/oh-yes-undertale.mp3');
+      playNext();
+      gameMode = true;
+      menuMode = true;
     }
   });
 
@@ -371,6 +565,8 @@ const retrievePageStateAndSetTheme = () => {
   }
 };
 
+
+
 window.onload = () => {
   introAnimations();
   retrievePageStateAndSetTheme();
@@ -378,10 +574,17 @@ window.onload = () => {
   heartUndertaleIcon = document.getElementById("undertale_heart_icon");
   gamewrapper = document.getElementById("game_tiles");
   heartUndertaleIcon.onclick = () => {
+    // Usage
+    addToQueue('./src/assets/music/BattleEncounter.mp3');
+
+    // Start playing the queue
+    playNext();
     loadGame();
+    
   };
   
 };
+
 
 //Clean off variables
 window.onunload = () => {

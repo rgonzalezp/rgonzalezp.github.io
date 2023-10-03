@@ -95,9 +95,10 @@ $game-width:1100px;
   }
   .heart_icon{
 
-    height : 34px!important;
+    height : 37.5px!important;
     top : 50%!important;
     transform : translateY(75%)!important;
+    color: #faf443;
   }
 
   .mercy_btn{
@@ -114,8 +115,8 @@ $game-width:1100px;
   
   #undertale_heart{
     position: absolute;
-    width: 26px;
-    height: 26px;
+    
+    height: 30.5px!important;
   }
 
 
