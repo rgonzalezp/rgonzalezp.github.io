@@ -5,6 +5,11 @@
       <!-- title -->
     {% if highlight.title %}
     <div>
+      <!-- wrap title with link-->
+      {% if highlight.link_paper %}
+  
+      <a href="{{ highlight.link_paper }}">
+        {% endif %}
       <p class="title-highlight" >{{ highlight.title }}.
         <!-- date -->
         {% if highlight.date %}
@@ -14,6 +19,8 @@
         {% if highlight.conference %}
           {{ highlight.conference }}»
         {% endif %}</p> 
+        {% if highlight.link_paper %} </a>
+        {% endif %}
     </div>
     {% endif %}
     </div>
