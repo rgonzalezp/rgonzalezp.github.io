@@ -1,4 +1,4 @@
-{% for highlight in site.highlights reversed %}
+{% for highlight in site.highlights  reversed limit:3 offset:1 %}
 <div class="highlight_info">
   <div class="row">
     <div class="col-sm-12">

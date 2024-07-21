@@ -13,6 +13,10 @@
 <lastmod>2022-07-20T00:00:00-04:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/highlights/highlight_Eyevisor/</loc>
+<lastmod>2024-05-12T00:00:00-04:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/recent_activity/recent_activity_Molder/</loc>
 <lastmod>2020-04-25T00:00:00-04:00</lastmod>
 </url>
@@ -49,6 +53,10 @@
 <lastmod>2022-08-26T00:00:00-04:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/recent_activity/recent_activity_JPM_internship_one/</loc>
+<lastmod>2023-06-03T00:00:00-04:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/recent_activity/recent_activity_CHI_submitted/</loc>
 <lastmod>2023-09-15T00:00:00-04:00</lastmod>
 </url>
@@ -59,6 +67,14 @@
 <url>
 <loc>http://localhost:4000/recent_activity/recent_activity_Eyevisor/</loc>
 <lastmod>2024-05-12T00:00:00-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/recent_activity/recent_activity_JPM_internship_two/</loc>
+<lastmod>2024-05-20T00:00:00-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/recent_activity/recent_activity_NVC/</loc>
+<lastmod>2024-06-26T00:00:00-04:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/research/2018-01-01-Talkit++/</loc>
@@ -104,6 +120,6 @@
 </url>
 <url>
 <loc>http://localhost:4000/src/assets/documents/Ricardo_Gonzalez_Penuela_CV.pdf</loc>
-<lastmod>2021-12-01T19:38:01-05:00</lastmod>
+<lastmod>2023-09-29T14:15:41-04:00</lastmod>
 </url>
 </urlset>
