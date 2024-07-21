@@ -5,3 +5,4 @@ date: 2022-07-20
 abstract: We submitted to the UIST'22 conference a paper about a haptic glove that PVI can use to request object descriptions in VR through hand gestures
 subtext: Submitted!
 ---
+
