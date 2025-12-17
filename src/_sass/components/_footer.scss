@@ -5,15 +5,6 @@
 }
 
 
-@keyframes banner {
-  from {
-    transform: translate3d(0,0,0);
-  }
-
-  to {
-    transform: translate3d(-30%,0,0);
-  }
-}
 
 
 .footer {
@@ -25,21 +16,14 @@
   padding: 0;
   margin: 25px 10px 0 0;
 
-  .nav_bar:hover {
-    animation-play-state: paused;
-  }
   .nav_bar {
-    width: 320%;
+    width: 100%;
     margin-top: 0;
     margin-bottom: 0;
-    padding-left: 10%;
-    padding-right: 10%;
-    animation-duration: 6.5s;
-    animation-name: banner;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    
-    }
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: center;
+  }
 
   .nav_bar {
     bottom: 0;
@@ -48,6 +32,11 @@
     display: flex;
     list-style: none;
     text-align: center;
+    .footer_owner_info {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
     li {
       list-style: none;
       display: inline-block;
@@ -68,6 +57,8 @@
   .footer_copyright {
     margin: 0;
     font-size: 18px;
+    list-style-type: none;
+    padding: 0;
   }
   .footer_btn {
     @include simple_link_style;

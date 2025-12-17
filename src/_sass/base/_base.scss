@@ -75,10 +75,11 @@ a {
   color: $color-primary;
   text-decoration: underline dashed rgba($color-primary, 0.5);
 }
-a:hover {
+a:hover, a:focus {
   color: $color-secondary;
   text-decoration: none;
   cursor: pointer;
+  outline: 2px solid $color-secondary;
 }
 img {
   max-width: 100%;
@@ -139,8 +140,9 @@ article {
   a {
     padding: 0 0.3em;
   }
-  a:hover {
+  a:hover, a:focus {
     font-weight: bold;
+    outline: 2px solid $color-secondary;
   }
 }
 // markdown style reset: keyword
@@ -192,13 +194,10 @@ input[type="checkbox"]:checked::before {
 
 
 .tile {
-  cursor: pointer;
+  cursor: default;
   position: relative;
 }
 
-.tile:hover:before {
-  background-color: rgb(30, 30, 30);
-}
 
 .tile:before {
   background-color: rgb(15, 15, 15);

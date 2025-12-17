@@ -11,27 +11,37 @@
     margin-top:-2.5px!important;
 }
 #title {
-  font-size: 88px;
+  font-size: 88px !important;
   padding-top: 25px;
   height: 50px;
   font-family: DotGothic;
   padding-left: 30px;
+  text-align: left !important;
+  margin: 0;
+  font-weight: 500;
+  border: none;
 }
 
 #highlight {
-  font-size: 70px;
+  font-size: 70px !important;
   padding-top: 25px;
   height: 50px;
   font-family: DotGothic;
   padding-left: 30px;
+  border-bottom: none;
+  margin: 0;
+  font-weight: 500;
 }
 
 #recent-activity {
-  font-size: 60px;
+  font-size: 60px !important;
   height: 100px;
   font-family: DotGothic;
   padding-top: 20px;
   text-align: center;
+  border-bottom: none;
+  margin: 0;
+  font-weight: 500;
 }
 
 .separator-zone-1 {
@@ -65,14 +75,14 @@
   
 
   #title {
-    font-size: 5vw;
+    font-size: 5vw !important;
     padding-top: 25px;
     height: 50px;
     padding-left: 30px;
   }
 
   #highlight {
-    font-size: 4.4vw;
+    font-size: 4.4vw !important;
     padding-top: 25px;
     height: 50px;
  
@@ -80,7 +90,7 @@
   }
 
   #recent-activity {
-    font-size: 3.5vw;
+    font-size: 3.5vw !important;
     height: 100px;
    
     padding-top: 20px;
@@ -180,15 +190,15 @@
 // screen auto-adjustment
 @media screen and (max-width: 500px) {
   #title {
-    font-size: 20px;
+    font-size: 20px !important;
     padding-top: 25px;
     height: 50px;
 
     padding-left: 30px;
   }
 
-  #hightlight {
-    font-size: 20px;
+  #highlight {
+    font-size: 20px !important;
     padding-top: 25px;
     height: 50px;
 
@@ -196,7 +206,7 @@
   }
 
   #recent-activity {
-    font-size: 50px;
+    font-size: 50px !important;
     height: 50px;
 
     padding-top: 20px;

@@ -1,6 +1,7 @@
 ---
 title: Uncovering Visually Impaired Gamers' Preference for Spatial Awareness Tools Within Video Games
 image: "https://github.com/rgonzalezp/rgonzalezp.github.io/blob/main/src/assets/img/general/WhiteCheckmark.gif?raw=true"
+alttext: "A green animated checkmark rotating in the style of playstation 1 games"
 date: 2022-06-16
 abstract: Our investigation of four leading approaches to facilitate spatial awareness for PVI within a 3D game was accepted as a full publication to be presented in the ASSETS'22 conference! :)
 subtext: Accepted!

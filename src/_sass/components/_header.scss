@@ -73,12 +73,14 @@
     ul {
       padding: 0;
       margin: 0;
+      list-style-type: none;
       .li_left {
         list-style: none;
         display: inline-block;
         cursor: pointer;
       }
       .span_right {
+        list-style: none;
         float: right;
         cursor: pointer;
         max-width: 60%;

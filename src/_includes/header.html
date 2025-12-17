@@ -11,6 +11,8 @@
               <a
                 class="header_btn collection_btn"
                 onclick="open_collection_list()"
+                href="javascript:void(0)"
+                role="button"
               >
                 <i class="fa btn_icon fa-bars">
                   {% if page.btn_text != false %}
@@ -26,7 +28,7 @@
                 href="{{ site.url }}{{ site.baseurl }}/"
               >
               <i class="fa btn_icon">
-                <img class= "myicon" src="https://github.com/rgonzalezp/rgonzalezp.github.io/blob/main/src/assets/img/icons/home32_v2.png?raw=true">
+                <img class= "myicon" src="https://github.com/rgonzalezp/rgonzalezp.github.io/blob/main/src/assets/img/icons/home32_v2.png?raw=true" alt="">
                   {% if page.btn_text != false %}
                   <p class="btn_text">Home</p>
                   {% endif %}
@@ -40,16 +42,16 @@
                 href="{{ site.url }}{{ site.baseurl }}/research"
               >
               <i class="fa btn_icon">
-                <img class= "myicon" src="https://github.com/rgonzalezp/rgonzalezp.github.io/blob/main/src/assets/img/icons/flask32.png?raw=true">
+                <img class= "myicon" src="https://github.com/rgonzalezp/rgonzalezp.github.io/blob/main/src/assets/img/icons/flask32.png?raw=true" alt="Research Papers">
                   {% if page.btn_text != false %}
                   <p class="btn_text">Research</p>
                   {% endif %}
                 </i>
               </a>
               {% endif %} {% if page.about != false %}
-              <a class="header_btn research_btn" onclick="scroll_percentage(2)">
+              <a class="header_btn research_btn" onclick="scroll_percentage(2)" href="javascript:void(0)" role="button">
                 <i class="fa btn_icon">
-                  <img class= "myicon" src="https://github.com/rgonzalezp/rgonzalezp.github.io/blob/main/src/assets/img/icons/contact32.png?raw=true">
+                  <img class= "myicon" src="https://github.com/rgonzalezp/rgonzalezp.github.io/blob/main/src/assets/img/icons/contact32.png?raw=true" alt="">
                   {% if page.about != false %}
                   <p class="btn_text">Contact</p>
                   {% endif %}
@@ -69,12 +71,14 @@
               <!-- access token -->
             </li>
             <!-- right header -->
-            <span class="span_right">
+            <li class="span_right">
               {% if page.toc != false %}
               <!-- scroll up -->
               <a
                 class="header_btn previous_btn"
                 onclick="scroll_percentage(-0.88)"
+                href="javascript:void(0)"
+                role="button"
               >
                 <i class="fa btn_icon fa-backward">
                   {% if page.btn_text != false %}
@@ -83,7 +87,7 @@
                 </i>
               </a>
               <!-- scroll down -->
-              <a class="header_btn next_btn" onclick="scroll_percentage(0.88)">
+              <a class="header_btn next_btn" onclick="scroll_percentage(0.88)" href="javascript:void(0)" role="button">
                 <i class="fa btn_icon fa-forward">
                   {% if page.btn_text != false %}
                   <p class="btn_text">Next</p>
@@ -91,7 +95,7 @@
                 </i>
               </a>
               <!-- popup table of content -->
-              <a class="header_btn popup_btn" onclick="toggle_toc()">
+              <a class="header_btn popup_btn" onclick="toggle_toc()" href="javascript:void(0)" role="button">
                 <i class="fa btn_icon fa-list">
                   {% if page.btn_text != false %}
                   <p class="btn_text">Content</p>
@@ -121,14 +125,14 @@
                 href="https://raw.githubusercontent.com/rgonzalezp/My-true-CV/master/PhD_Resume.pdf"
               >
                 <i class="fa btn_icon">
-                  <img class= "myicon" src="https://github.com/rgonzalezp/rgonzalezp.github.io/blob/main/src/assets/img/icons/resume32.png?raw=true">
+                  <img class= "myicon" src="https://github.com/rgonzalezp/rgonzalezp.github.io/blob/main/src/assets/img/icons/resume32.png?raw=true" alt="">
                   {% if page.btn_text != false %}
                   <p class="btn_text">CV</p>
                   {% endif %}
                 </i>
               </a>
               {% endif %} {% endif %}
-            </span>
+            </li>
           </ul>
         </nav>
         <!-- <hr /> -->

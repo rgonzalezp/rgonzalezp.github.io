@@ -1,6 +1,10 @@
 // toggle toc -> header.html -> .span_right .popup_btn
 function toggle_toc() {
-    document.getElementById("popup_toc").classList.toggle("show");
+    var toc = document.getElementById("popup_toc");
+    toc.classList.toggle("show");
+    if (toc.classList.contains("show")) {
+        toc.focus();
+    }
 }
 
 // open collection list -> header.html -> .collection_list

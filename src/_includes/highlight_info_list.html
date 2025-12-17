@@ -10,7 +10,7 @@
   
       <a href="{{ highlight.link_paper }}">
         {% endif %}
-      <p class="title-highlight" >{{ highlight.title }}.
+      <h3 class="title-highlight" >{{ highlight.title }}.
         <!-- date -->
         {% if highlight.date %}
         «{{ highlight.date | date: "%b %d, %Y" }}
@@ -18,7 +18,7 @@
          <!-- conference -->
         {% if highlight.conference %}
           {{ highlight.conference }}»
-        {% endif %}</p> 
+        {% endif %}</h3> 
         {% if highlight.link_paper %} </a>
         {% endif %}
     </div>
@@ -30,7 +30,7 @@
         <!-- image -->
       {% if highlight.image %}
       
-        <img class="image-highlight" src="{{highlight.image}}"/>
+        <img class="image-highlight" src="{{highlight.image}}" alt="{{highlight.alttext}}"/>
   
       {% endif %}
   </div>

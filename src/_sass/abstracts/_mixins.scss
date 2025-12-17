@@ -15,12 +15,13 @@
     font-style: normal !important ;
     text-decoration: none !important;
   }
-  &:hover {
+  &:hover, &:focus {
     text-decoration: none !important;
     font-weight: inherit;
     color: $color-secondary !important;
     cursor: pointer;
     text-shadow: 0 0 4px $color-secondary;
+    outline: 2px solid $color-secondary;
   }  
 }
 
