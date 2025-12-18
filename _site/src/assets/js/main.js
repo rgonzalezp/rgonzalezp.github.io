@@ -1,3 +1,61 @@
+var previousActiveElement;
+
+function trapFocus(e) {
+    // Escape key to close
+    if (e.key === 'Escape') {
+        close_collection_list();
+        return;
+    }
+
+    var collectionList = document.getElementById("the_collection_list");
+    if (!collectionList || !collectionList.classList.contains("show")) {
+        return;
+    }
+    
+    var isTabPressed = (e.key === 'Tab' || e.keyCode === 9);
+
+    if (!isTabPressed) {
+        return;
+    }
+
+    var focusableSelector = 'a[href], button, textarea, input, select, [tabindex]:not([tabindex="-1"])';
+    
+    // Only select elements from visible areas: Header, Navigation, and the Active Collection
+    var header = collectionList.querySelector('.collection_list_header');
+    var nav = collectionList.querySelector('.collection_name_list');
+    var activeContent = collectionList.querySelector('.post_list_in_1_collection.show');
+    
+    var elements = [];
+    if (header) elements = elements.concat(Array.prototype.slice.call(header.querySelectorAll(focusableSelector)));
+    if (nav) elements = elements.concat(Array.prototype.slice.call(nav.querySelectorAll(focusableSelector)));
+    if (activeContent) elements = elements.concat(Array.prototype.slice.call(activeContent.querySelectorAll(focusableSelector)));
+
+    // Filter visible elements (double check, though scoping should handle most of it)
+    var visibleFocusableElements = elements.filter(function(element) {
+        return element.offsetWidth > 0 || element.offsetHeight > 0 || element.getClientRects().length > 0;
+    });
+
+    if (visibleFocusableElements.length === 0) {
+        e.preventDefault();
+        return;
+    }
+
+    var firstElement = visibleFocusableElements[0];
+    var lastElement = visibleFocusableElements[visibleFocusableElements.length - 1];
+
+    if (e.shiftKey) { /* shift + tab */
+        if (document.activeElement === firstElement) {
+            lastElement.focus();
+            e.preventDefault();
+        }
+    } else { /* tab */
+        if (document.activeElement === lastElement) {
+            firstElement.focus();
+            e.preventDefault();
+        }
+    }
+}
+
 // toggle toc -> header.html -> .span_right .popup_btn
 function toggle_toc() {
     var toc = document.getElementById("popup_toc");
@@ -9,10 +67,23 @@ function toggle_toc() {
 
 // open collection list -> header.html -> .collection_list
 function open_collection_list() {
+    previousActiveElement = document.activeElement;
     document.getElementById("the_collection_list").classList.add("show");
     document.getElementById("the_collection_list").classList.remove("remove");
     show_collection("all");
+    
+    document.addEventListener('keydown', trapFocus);
+    
+    // Focus the first focusable element (close button usually)
+    setTimeout(function() {
+         var collectionList = document.getElementById("the_collection_list");
+         var closeBtn = collectionList.querySelector('.close_btn_icon');
+         if (closeBtn) {
+             closeBtn.focus();
+         }
+    }, 100);
 }
+
 // close collection list -> collections.html -> .collection_list
 function close_collection_list() {
     document.getElementById("the_collection_list").classList.remove("show");
@@ -21,7 +92,12 @@ function close_collection_list() {
     for (idx = 0; idx < collection_labels.length; idx++) {
         collection_labels[idx].classList.remove("show");
         collection_labels[idx].classList.remove("remove");
-        
+    }
+    
+    document.removeEventListener('keydown', trapFocus);
+    
+    if (previousActiveElement) {
+        previousActiveElement.focus();
     }
 }
 
@@ -87,6 +163,7 @@ function apply_token() {
             } catch (e) {
                 alert("Invalid Access Token!");
                 return;
+                
             }
             elem_clct[acc].innerHTML = txt;
         }
@@ -99,5 +176,3 @@ function apply_token() {
         document.getElementById("acs_btn").style.display = "none";
     }
 }
-
-
